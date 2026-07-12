@@ -6,14 +6,20 @@
 <title>Jogos do Dia</title>
 <style>
   :root {
-    --bg: #0f1115;
-    --card: #171a21;
-    --card-hover: #1c202a;
-    --border: #262b36;
-    --text: #e8eaed;
-    --muted: #8b93a1;
-    --accent: #4ade80;
-    --chip: #232838;
+    --bg: #eef1f5;
+    --card: #ffffff;
+    --border: #e4e7ec;
+    --text: #1a1d24;
+    --muted: #8a92a3;
+    --accent: #f0b90b;
+    --accent-dark: #16181f;
+    --good: #d7f5df;
+    --good-text: #1a8a44;
+    --mid: #fdf1cf;
+    --mid-text: #a5730a;
+    --bad: #fbe0e1;
+    --bad-text: #c23b3e;
+    --neutral: #f2f3f6;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,18 +27,34 @@
     font-family: -apple-system, Segoe UI, Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
-    padding: 20px 16px 60px;
+    padding: 0 0 60px;
   }
-  .wrap { max-width: 900px; margin: 0 auto; }
-  h1 { font-size: 21px; margin: 0 0 4px; }
-  .meta { color: var(--muted); font-size: 12.5px; margin-bottom: 18px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
 
-  /* Barra de filtros */
+  .topbar {
+    background: var(--accent-dark);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .topbar .badge {
+    width: 30px; height: 30px;
+    background: var(--accent);
+    color: var(--accent-dark);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 13px;
+  }
+  .topbar h1 { color: #fff; font-size: 16px; margin: 0; font-weight: 600; }
+  .topbar .meta { color: #9aa0ad; font-size: 11.5px; margin-left: auto; }
+
   .filters {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     position: sticky;
     top: 0;
     background: var(--bg);
@@ -44,21 +66,20 @@
     border: 1px solid var(--border);
     color: var(--text);
     border-radius: 8px;
-    padding: 8px 10px;
+    padding: 9px 12px;
     font-size: 13px;
   }
   .filters input { flex: 1; min-width: 140px; }
   .filters select { min-width: 160px; }
 
-  /* Card do jogo (collapsed by default) */
   details.match {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
     margin-bottom: 10px;
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(20,20,30,0.04);
   }
-  details.match[open] { background: var(--card-hover); }
   summary.match-summary {
     list-style: none;
     cursor: pointer;
@@ -70,87 +91,126 @@
     flex-wrap: wrap;
   }
   summary.match-summary::-webkit-details-marker { display: none; }
-  .teams { font-size: 15px; font-weight: 600; }
+  .teams { font-size: 14.5px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .crest { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; }
+  .vs { color: var(--muted); font-weight: 400; font-size: 13px; }
   .summary-right { display: flex; align-items: center; gap: 10px; }
   .league-chip {
-    background: var(--chip);
+    background: var(--neutral);
     color: var(--muted);
     font-size: 11px;
-    padding: 3px 8px;
+    padding: 3px 9px;
     border-radius: 20px;
     white-space: nowrap;
   }
-  .time-chip { color: var(--accent); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .time-chip {
+    color: var(--accent-dark);
+    background: var(--accent);
+    font-size: 12px; font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
   .caret { color: var(--muted); font-size: 12px; transition: transform .15s; }
   details[open] > summary .caret { transform: rotate(90deg); }
 
-  .match-body { padding: 0 16px 16px; }
-  .section-title {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    color: var(--muted);
-    margin: 12px 0 8px;
-  }
+  .match-body { padding: 4px 16px 16px; border-top: 1px solid var(--border); }
 
-  /* Casa de apostas: accordion */
+  .tabs { display: flex; gap: 4px; margin: 12px 0 10px; border-bottom: 1px solid var(--border); }
+  .tab-btn {
+    background: none; border: none; cursor: pointer;
+    padding: 8px 12px; font-size: 12.5px; font-weight: 600;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active { color: var(--accent-dark); border-bottom-color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
   details.bookmaker {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 8px;
-    background: rgba(255,255,255,0.02);
+    background: var(--neutral);
   }
   summary.bookmaker-summary {
     list-style: none;
     cursor: pointer;
-    padding: 8px 10px;
-    font-weight: 600;
+    padding: 9px 12px;
+    font-weight: 700;
     font-size: 13px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   summary.bookmaker-summary::-webkit-details-marker { display: none; }
-  .bookmaker-body { padding: 0 10px 10px; }
+  .bookmaker-body { padding: 4px 12px 10px; }
 
-  /* Categoria de mercado dentro da casa: accordion aninhado */
-  details.category {
-    margin-top: 6px;
-    border-top: 1px solid var(--border);
-    padding-top: 6px;
-  }
+  details.category { margin-top: 6px; border-top: 1px solid var(--border); padding-top: 6px; }
   details.category:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
   summary.category-summary {
     list-style: none;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
     color: var(--muted);
     padding: 4px 0;
     display: flex;
     justify-content: space-between;
   }
   summary.category-summary::-webkit-details-marker { display: none; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 2px; }
-  td { padding: 3px 6px; border-bottom: 1px solid var(--border); }
-  td.market-name { color: var(--muted); font-size: 11.5px; padding-top: 8px; }
-  td.odd-value { text-align: right; font-weight: 600; }
 
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    font-size: 13px;
+  .market-block { margin: 6px 0; }
+  .market-name { color: var(--muted); font-size: 11px; font-weight: 600; margin-bottom: 3px; }
+  .odd-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; font-size: 13px; }
+  .odd-pill {
+    background: #fff;
+    border: 1px solid var(--border);
+    font-weight: 700;
+    font-size: 12.5px;
+    padding: 2px 9px;
+    border-radius: 6px;
+    min-width: 44px;
+    text-align: center;
   }
-  .stats-grid .team-name { font-weight: 600; margin-bottom: 4px; }
-  .stats-grid div div { color: var(--muted); font-size: 12.5px; padding: 1px 0; }
+
+  .stats-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .stats-table th {
+    font-size: 11px; color: var(--muted); font-weight: 600;
+    text-align: center; padding: 6px 4px;
+  }
+  .stats-table th:first-child { text-align: left; }
+  .stats-table th img.crest { width: 20px; height: 20px; }
+  .stats-table td { padding: 4px; text-align: center; }
+  .stats-table td.label {
+    text-align: left; font-size: 12.5px; color: var(--text); font-weight: 500;
+  }
+  .stat-pill {
+    display: inline-block;
+    min-width: 46px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    background: var(--neutral);
+    color: var(--text);
+  }
+  .stat-pill.good { background: var(--good); color: var(--good-text); }
+  .stat-pill.mid  { background: var(--mid);  color: var(--mid-text); }
+  .stat-pill.bad  { background: var(--bad);  color: var(--bad-text); }
+
   .empty { color: var(--muted); font-size: 13px; font-style: italic; }
   .no-results { text-align: center; padding: 40px 0; color: var(--muted); }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>⚽ Jogos do Dia</h1>
-  <div class="meta" id="meta">Carregando...</div>
+  <div class="topbar">
+    <div class="badge">⚽</div>
+    <h1>Jogos do Dia</h1>
+    <div class="meta" id="meta">Carregando...</div>
+  </div>
 
+<div class="wrap">
   <div class="filters">
     <input id="searchInput" type="text" placeholder="Buscar time...">
     <select id="leagueSelect">
@@ -164,7 +224,6 @@
 <script>
 let allMatches = [];
 
-// Agrupa nomes de mercado em categorias, pra deixar compacto
 const CATEGORY_RULES = [
   { key: 'principal', label: 'Principal', test: n => /match winner|double chance|both teams|draw no bet|1x2/i.test(n) },
   { key: 'gols', label: 'Gols', test: n => /goals|over\/under|correct score/i.test(n) },
@@ -175,8 +234,7 @@ const CATEGORY_RULES = [
   { key: 'handicap', label: 'Handicap', test: n => /handicap/i.test(n) },
 ];
 function categorize(marketName) {
-  const rule = CATEGORY_RULES.find(r => r.test(marketName));
-  return rule || { key: 'outros', label: 'Outros' };
+  return CATEGORY_RULES.find(r => r.test(marketName)) || { key: 'outros', label: 'Outros' };
 }
 
 async function load() {
@@ -185,7 +243,7 @@ async function load() {
     const res = await fetch('data.json?_=' + Date.now());
     const data = await res.json();
     allMatches = data.jogos || [];
-    metaEl.textContent = `Atualizado em ${new Date(data.gerado_em).toLocaleString('pt-BR')} — ${allMatches.length} jogos`;
+    metaEl.textContent = `Atualizado ${new Date(data.gerado_em).toLocaleString('pt-BR')} · ${allMatches.length} jogos`;
 
     populateLeagueFilter();
     render();
@@ -193,7 +251,7 @@ async function load() {
     document.getElementById('searchInput').addEventListener('input', render);
     document.getElementById('leagueSelect').addEventListener('change', render);
   } catch (e) {
-    metaEl.textContent = 'Erro ao carregar data.json. Rode o fetch_data.py e faça commit do arquivo.';
+    metaEl.textContent = 'Erro ao carregar data.json.';
     console.error(e);
   }
 }
@@ -227,34 +285,35 @@ function render() {
     return;
   }
 
-  container.innerHTML = filtered.map(renderMatch).join('');
+  container.innerHTML = filtered.map((m, idx) => renderMatch(m, idx)).join('');
 }
 
-function renderMatch(m) {
+function crestImg(url, teamName) {
+  if (!url) return '';
+  return `<img class="crest" src="${url}" alt="${teamName}" loading="lazy" onerror="this.style.display='none'">`;
+}
+
+function renderMatch(m, idx) {
   const hora = new Date(m.data_hora).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
   const bookmakers = Object.entries(m.odds || {});
+  const uid = `m${idx}`;
 
   const oddsHtml = bookmakers.length
     ? bookmakers.map(([bname, markets], i) => renderBookmaker(bname, markets, i === 0)).join('')
     : '<p class="empty">Nenhuma odd encontrada para Bet365/Betano/Superbet neste jogo.</p>';
 
-  const statsHtml = `
-    <div class="stats-grid">
-      <div>
-        <div class="team-name">${m.time_casa}</div>
-        ${renderStats(m.stats_casa)}
-      </div>
-      <div>
-        <div class="team-name">${m.time_fora}</div>
-        ${renderStats(m.stats_fora)}
-      </div>
-    </div>
-  `;
+  const statsHtml = renderStatsTable(m);
 
   return `
     <details class="match">
       <summary class="match-summary">
-        <span class="teams">${m.time_casa} x ${m.time_fora}</span>
+        <span class="teams">
+          ${crestImg(m.time_casa_escudo, m.time_casa)}
+          ${m.time_casa}
+          <span class="vs">x</span>
+          ${crestImg(m.time_fora_escudo, m.time_fora)}
+          ${m.time_fora}
+        </span>
         <span class="summary-right">
           <span class="league-chip">${m.liga}</span>
           <span class="time-chip">${hora}</span>
@@ -262,18 +321,26 @@ function renderMatch(m) {
         </span>
       </summary>
       <div class="match-body">
-        <div class="section-title">Odds</div>
-        ${oddsHtml}
-
-        <div class="section-title">Estatísticas da temporada</div>
-        ${statsHtml}
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab('${uid}', 'odds', this)">Odds</button>
+          <button class="tab-btn" onclick="switchTab('${uid}', 'stats', this)">Estatísticas</button>
+        </div>
+        <div class="tab-panel active" id="${uid}-odds">${oddsHtml}</div>
+        <div class="tab-panel" id="${uid}-stats">${statsHtml}</div>
       </div>
     </details>
   `;
 }
 
+function switchTab(uid, tab, btn) {
+  const parent = btn.closest('.match-body');
+  parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(`${uid}-${tab}`).classList.add('active');
+}
+
 function renderBookmaker(bname, markets, openByDefault) {
-  // Agrupa os mercados dessa casa por categoria
   const groups = {};
   Object.entries(markets).forEach(([marketName, outcomes]) => {
     const cat = categorize(marketName);
@@ -292,10 +359,15 @@ function renderBookmaker(bname, markets, openByDefault) {
           <span>${isMain ? '' : '▸'}</span>
         </summary>
         ${g.items.map(item => `
-          <table>
-            <tr><td class="market-name" colspan="2">${item.marketName}</td></tr>
-            ${item.outcomes.map(o => `<tr><td>${o.outcome}</td><td class="odd-value">${o.odd}</td></tr>`).join('')}
-          </table>
+          <div class="market-block">
+            <div class="market-name">${item.marketName}</div>
+            ${item.outcomes.map(o => `
+              <div class="odd-row">
+                <span>${o.outcome}</span>
+                <span class="odd-pill">${o.odd}</span>
+              </div>
+            `).join('')}
+          </div>
         `).join('')}
       </details>
     `;
@@ -305,23 +377,61 @@ function renderBookmaker(bname, markets, openByDefault) {
     <details class="bookmaker" ${openByDefault ? 'open' : ''}>
       <summary class="bookmaker-summary">
         <span>${bname}</span>
-        <span>${groupKeys.length} categoria(s)</span>
+        <span class="league-chip">${groupKeys.length} categoria(s)</span>
       </summary>
       <div class="bookmaker-body">${categoriesHtml}</div>
     </details>
   `;
 }
 
-function renderStats(s) {
-  if (!s) return '<div class="empty">sem dados</div>';
+function pillClass(valueA, valueB, higherIsBetter) {
+  if (valueA == null || valueB == null || valueA === valueB) return '';
+  const aIsBetter = higherIsBetter ? valueA > valueB : valueA < valueB;
+  return aIsBetter ? 'good' : 'bad';
+}
+
+function statPill(value, cls) {
+  const display = value ?? '-';
+  return `<span class="stat-pill ${cls}">${display}</span>`;
+}
+
+function renderStatsTable(m) {
+  const home = m.stats_casa, away = m.stats_fora;
+  if (!home && !away) return '<p class="empty">Sem estatísticas disponíveis.</p>';
+
+  const rows = [
+    { label: 'Jogos disputados', key: 'jogos', higherIsBetter: null },
+    { label: 'Média gols marcados', key: 'gols_marcados_media', higherIsBetter: true },
+    { label: 'Média gols sofridos', key: 'gols_sofridos_media', higherIsBetter: false },
+    { label: 'Cartões amarelos (temporada)', key: 'cartoes_amarelos_total', higherIsBetter: false },
+    { label: 'Cartões vermelhos (temporada)', key: 'cartoes_vermelhos_total', higherIsBetter: false },
+  ];
+
+  const rowsHtml = rows.map(r => {
+    const vh = home ? home[r.key] : null;
+    const va = away ? away[r.key] : null;
+    const clsH = r.higherIsBetter === null ? '' : pillClass(vh, va, r.higherIsBetter);
+    const clsA = r.higherIsBetter === null ? '' : pillClass(va, vh, r.higherIsBetter);
+    return `
+      <tr>
+        <td class="label">${r.label}</td>
+        <td>${statPill(vh, clsH)}</td>
+        <td>${statPill(va, clsA)}</td>
+      </tr>
+    `;
+  }).join('');
+
   return `
-    <div>
-      <div>Jogos: ${s.jogos ?? '-'}</div>
-      <div>Média gols marcados: ${s.gols_marcados_media ?? '-'}</div>
-      <div>Média gols sofridos: ${s.gols_sofridos_media ?? '-'}</div>
-      <div>Cartões amarelos (temporada): ${s.cartoes_amarelos_total ?? '-'}</div>
-      <div>Cartões vermelhos (temporada): ${s.cartoes_vermelhos_total ?? '-'}</div>
-    </div>
+    <table class="stats-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>${crestImg(m.time_casa_escudo, m.time_casa)}</th>
+          <th>${crestImg(m.time_fora_escudo, m.time_fora)}</th>
+        </tr>
+      </thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
   `;
 }
 
