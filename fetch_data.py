@@ -144,9 +144,12 @@ def main():
         matches_out.append({
             "fixture_id": fid,
             "liga": f["league"]["name"],
+            "liga_logo": f["league"].get("logo"),
             "data_hora": f["fixture"]["date"],
             "time_casa": home["name"],
+            "time_casa_escudo": home.get("logo"),
             "time_fora": away["name"],
+            "time_fora_escudo": away.get("logo"),
             "odds": odds,
             "stats_casa": home_stats,
             "stats_fora": away_stats,
