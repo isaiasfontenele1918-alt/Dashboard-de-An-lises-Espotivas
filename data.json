@@ -1,12 +1,15 @@
 {
-  "gerado_em": "2026-07-12T16:07:01.463507",
+  "gerado_em": "2026-07-12T16:47:15.039297",
   "jogos": [
     {
       "fixture_id": 1520766,
       "liga": "Serie B",
+      "liga_logo": "https://media.api-sports.io/football/leagues/72.png",
       "data_hora": "2026-07-12T14:00:00+00:00",
       "time_casa": "Operario-PR",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/1223.png",
       "time_fora": "Novorizontino",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/7834.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
@@ -5011,9 +5014,12 @@
     {
       "fixture_id": 1520762,
       "liga": "Serie B",
+      "liga_logo": "https://media.api-sports.io/football/leagues/72.png",
       "data_hora": "2026-07-12T19:00:00+00:00",
       "time_casa": "Avai",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/145.png",
       "time_fora": "Nautico Recife",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/755.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
@@ -10048,23 +10054,26 @@
     {
       "fixture_id": 1520768,
       "liga": "Serie B",
+      "liga_logo": "https://media.api-sports.io/football/leagues/72.png",
       "data_hora": "2026-07-12T19:00:00+00:00",
       "time_casa": "São Bernardo",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/7865.png",
       "time_fora": "Cuiaba",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/1193.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
             {
               "outcome": "Home",
-              "odd": "2.40"
+              "odd": "2.70"
             },
             {
               "outcome": "Draw",
-              "odd": "2.90"
+              "odd": "2.88"
             },
             {
               "outcome": "Away",
-              "odd": "3.20"
+              "odd": "2.80"
             }
           ],
           "Second Half Winner": [
@@ -10084,83 +10093,83 @@
           "Asian Handicap": [
             {
               "outcome": "Home -1.25",
-              "odd": "5.00"
+              "odd": "5.75"
             },
             {
               "outcome": "Away -1.25",
-              "odd": "1.17"
+              "odd": "1.14"
             },
             {
               "outcome": "Home -1",
-              "odd": "4.25"
+              "odd": "5.00"
             },
             {
               "outcome": "Away -1",
-              "odd": "1.21"
+              "odd": "1.17"
             },
             {
               "outcome": "Home -0.75",
-              "odd": "3.00"
+              "odd": "3.30"
             },
             {
               "outcome": "Away -0.75",
-              "odd": "1.38"
+              "odd": "1.32"
             },
             {
               "outcome": "Home -0.5",
-              "odd": "2.38"
+              "odd": "2.60"
             },
             {
               "outcome": "Away -0.5",
-              "odd": "1.55"
+              "odd": "1.48"
             },
             {
               "outcome": "Home -0.25",
-              "odd": "2.05"
-            },
-            {
-              "outcome": "Away -0.25",
-              "odd": "1.75"
-            },
-            {
-              "outcome": "Home +0",
-              "odd": "1.65"
-            },
-            {
-              "outcome": "Away +0",
               "odd": "2.20"
             },
             {
+              "outcome": "Away -0.25",
+              "odd": "1.65"
+            },
+            {
+              "outcome": "Home +0",
+              "odd": "1.82"
+            },
+            {
+              "outcome": "Away +0",
+              "odd": "1.98"
+            },
+            {
               "outcome": "Home +0.25",
-              "odd": "1.45"
+              "odd": "1.52"
             },
             {
               "outcome": "Away +0.25",
-              "odd": "2.68"
+              "odd": "2.42"
             },
             {
               "outcome": "Home +0.5",
-              "odd": "1.35"
+              "odd": "1.40"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "3.10"
+              "odd": "2.85"
             },
             {
               "outcome": "Home +0.75",
-              "odd": "1.23"
+              "odd": "1.26"
             },
             {
               "outcome": "Away +0.75",
-              "odd": "4.10"
+              "odd": "3.70"
             },
             {
               "outcome": "Home +1",
-              "odd": "1.11"
+              "odd": "1.13"
             },
             {
               "outcome": "Away +1",
-              "odd": "6.60"
+              "odd": "5.90"
             },
             {
               "outcome": "Home -1.75",
@@ -10172,18 +10181,26 @@
             },
             {
               "outcome": "Home -1.5",
-              "odd": "5.75"
+              "odd": "6.25"
             },
             {
               "outcome": "Away -1.5",
-              "odd": "1.14"
+              "odd": "1.12"
             },
             {
               "outcome": "Home +1.25",
-              "odd": "1.10"
+              "odd": "1.12"
             },
             {
               "outcome": "Away +1.25",
+              "odd": "6.40"
+            },
+            {
+              "outcome": "Home +1.5",
+              "odd": "1.10"
+            },
+            {
+              "outcome": "Away +1.5",
               "odd": "7.00"
             }
           ],
@@ -10264,11 +10281,11 @@
             },
             {
               "outcome": "Over 0.5",
-              "odd": "1.40"
+              "odd": "1.44"
             },
             {
               "outcome": "Under 0.5",
-              "odd": "2.75"
+              "odd": "2.62"
             }
           ],
           "Both Teams Score": [
@@ -10346,7 +10363,7 @@
           "Double Chance": [
             {
               "outcome": "Home/Draw",
-              "odd": "1.36"
+              "odd": "1.40"
             },
             {
               "outcome": "Home/Away",
@@ -10354,49 +10371,49 @@
             },
             {
               "outcome": "Draw/Away",
-              "odd": "1.53"
+              "odd": "1.44"
             }
           ],
           "First Half Winner": [
             {
               "outcome": "Home",
-              "odd": "3.25"
+              "odd": "3.60"
             },
             {
               "outcome": "Draw",
-              "odd": "1.91"
+              "odd": "1.83"
             },
             {
               "outcome": "Away",
-              "odd": "4.00"
+              "odd": "3.75"
             }
           ],
           "Win Both Halves": [
             {
               "outcome": "Home",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Away",
-              "odd": "15.00"
+              "odd": "13.00"
             }
           ],
           "Handicap Result - First Half": [
             {
               "outcome": "Home -1",
-              "odd": "12.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Away -1",
-              "odd": "1.33"
+              "odd": "1.28"
             },
             {
               "outcome": "Draw -1",
-              "odd": "3.75"
+              "odd": "4.00"
             },
             {
               "outcome": "Home -3",
-              "odd": "401.00"
+              "odd": "451.00"
             },
             {
               "outcome": "Draw -3",
@@ -10408,99 +10425,99 @@
             },
             {
               "outcome": "Home -2",
-              "odd": "41.00"
+              "odd": "51.00"
             },
             {
               "outcome": "Draw -2",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Away -2",
-              "odd": "1.04"
+              "odd": "1.03"
             },
             {
               "outcome": "Home +1",
-              "odd": "1.22"
+              "odd": "1.25"
             },
             {
               "outcome": "Draw +1",
-              "odd": "4.50"
+              "odd": "4.33"
             },
             {
               "outcome": "Away +1",
-              "odd": "17.00"
+              "odd": "15.00"
             }
           ],
           "Asian Handicap First Half": [
             {
               "outcome": "Home -0.75",
-              "odd": "4.50"
+              "odd": "5.25"
             },
             {
               "outcome": "Away -0.75",
-              "odd": "1.19"
+              "odd": "1.16"
             },
             {
               "outcome": "Home -0.5",
-              "odd": "3.30"
+              "odd": "3.45"
             },
             {
               "outcome": "Away -0.5",
-              "odd": "1.32"
+              "odd": "1.30"
             },
             {
               "outcome": "Home -0.25",
-              "odd": "2.42"
+              "odd": "2.68"
             },
             {
               "outcome": "Away -0.25",
-              "odd": "1.52"
+              "odd": "1.45"
             },
             {
               "outcome": "Home +0",
-              "odd": "1.68"
+              "odd": "1.82"
             },
             {
               "outcome": "Away +0",
-              "odd": "2.15"
+              "odd": "1.98"
             },
             {
               "outcome": "Home +0.25",
-              "odd": "1.35"
+              "odd": "1.40"
             },
             {
               "outcome": "Away +0.25",
-              "odd": "3.10"
+              "odd": "2.85"
             },
             {
               "outcome": "Home +0.5",
-              "odd": "1.23"
+              "odd": "1.26"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "4.00"
+              "odd": "3.70"
             },
             {
               "outcome": "Home +0.75",
-              "odd": "1.13"
+              "odd": "1.14"
             },
             {
               "outcome": "Away +0.75",
-              "odd": "5.90"
+              "odd": "5.75"
             }
           ],
           "Double Chance - First Half": [
             {
               "outcome": "Home/Draw",
-              "odd": "1.22"
+              "odd": "1.25"
             },
             {
               "outcome": "Home/Away",
-              "odd": "1.80"
+              "odd": "1.83"
             },
             {
               "outcome": "Draw/Away",
-              "odd": "1.33"
+              "odd": "1.28"
             }
           ],
           "Both Teams Score - First Half": [
@@ -10516,37 +10533,37 @@
           "Both Teams To Score - Second Half": [
             {
               "outcome": "Yes",
-              "odd": "4.50"
+              "odd": "5.00"
             },
             {
               "outcome": "No",
-              "odd": "1.18"
+              "odd": "1.17"
             }
           ],
           "Win To Nil": [
             {
               "outcome": "Home",
-              "odd": "3.40"
+              "odd": "3.75"
             },
             {
               "outcome": "Away",
-              "odd": "4.50"
+              "odd": "4.00"
             }
           ],
           "To Win Either Half": [
             {
               "outcome": "Home",
-              "odd": "1.83"
+              "odd": "2.00"
             },
             {
               "outcome": "Away",
-              "odd": "2.20"
+              "odd": "2.10"
             }
           ],
           "Results/Both Teams Score": [
             {
               "outcome": "Home/Yes",
-              "odd": "7.00"
+              "odd": "7.50"
             },
             {
               "outcome": "Draw/Yes",
@@ -10554,11 +10571,11 @@
             },
             {
               "outcome": "Away/Yes",
-              "odd": "9.00"
+              "odd": "8.50"
             },
             {
               "outcome": "Home/No",
-              "odd": "3.40"
+              "odd": "3.75"
             },
             {
               "outcome": "Draw/No",
@@ -10566,21 +10583,21 @@
             },
             {
               "outcome": "Away/No",
-              "odd": "4.50"
+              "odd": "4.00"
             }
           ],
           "First 10 min Winner": [
             {
               "outcome": "Home",
-              "odd": "9.50"
+              "odd": "10.00"
             },
             {
               "outcome": "Draw",
-              "odd": "1.10"
+              "odd": "1.09"
             },
             {
               "outcome": "Away",
-              "odd": "11.00"
+              "odd": "10.00"
             }
           ],
           "Corners Over Under": [
@@ -11000,21 +11017,21 @@
           "Home Team Total Cards": [
             {
               "outcome": "Over 2.5",
-              "odd": "2.10"
-            },
-            {
-              "outcome": "Under 2.5",
-              "odd": "1.67"
-            }
-          ],
-          "Away Team Total Cards": [
-            {
-              "outcome": "Over 2.5",
               "odd": "1.80"
             },
             {
               "outcome": "Under 2.5",
               "odd": "1.91"
+            }
+          ],
+          "Away Team Total Cards": [
+            {
+              "outcome": "Over 2.5",
+              "odd": "1.83"
+            },
+            {
+              "outcome": "Under 2.5",
+              "odd": "1.83"
             }
           ],
           "Corners. European Handicap": [
@@ -11033,48 +11050,52 @@
           ],
           "Home Player Shots": [
             {
+              "outcome": "Daniel Amorim - 1+",
+              "odd": "1.01"
+            },
+            {
               "outcome": "Luis Echapora - 1+",
-              "odd": "1.05"
+              "odd": "1.07"
             },
             {
               "outcome": "Fabricio Daniel - 1+",
-              "odd": "1.06"
+              "odd": "1.07"
             },
             {
               "outcome": "Lucas Rian - 1+",
-              "odd": "1.07"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 1+",
-              "odd": "1.07"
-            },
-            {
-              "outcome": "Hyoran - 1+",
-              "odd": "1.11"
-            },
-            {
-              "outcome": "Felipe Garcia - 1+",
-              "odd": "1.08"
-            },
-            {
-              "outcome": "Pablo Dyego - 1+",
               "odd": "1.10"
             },
             {
-              "outcome": "Lopes Pedrinho - 1+",
+              "outcome": "Pedro Vitor Ferreira - 1+",
+              "odd": "1.12"
+            },
+            {
+              "outcome": "Hyoran - 1+",
               "odd": "1.14"
             },
             {
+              "outcome": "Felipe Garcia - 1+",
+              "odd": "1.11"
+            },
+            {
+              "outcome": "Pablo Dyego - 1+",
+              "odd": "1.11"
+            },
+            {
+              "outcome": "Lopes Pedrinho - 1+",
+              "odd": "1.18"
+            },
+            {
               "outcome": "Roque Daniel Davi - 1+",
-              "odd": "1.17"
+              "odd": "1.25"
             },
             {
               "outcome": "Dudu Miraima - 1+",
-              "odd": "1.17"
+              "odd": "1.20"
             },
             {
               "outcome": "Hugo Sanches - 1+",
-              "odd": "1.18"
+              "odd": "1.22"
             },
             {
               "outcome": "Marcao Silva - 1+",
@@ -11082,7 +11103,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 1+",
-              "odd": "1.33"
+              "odd": "1.40"
             },
             {
               "outcome": "Ocimar Junior Urso - 1+",
@@ -11094,15 +11115,15 @@
             },
             {
               "outcome": "Lucas Fernandes - 1+",
-              "odd": "1.30"
-            },
-            {
-              "outcome": "Guilherme Foguinho - 1+",
               "odd": "1.36"
             },
             {
+              "outcome": "Guilherme Foguinho - 1+",
+              "odd": "1.44"
+            },
+            {
               "outcome": "Anderson Para - 1+",
-              "odd": "1.53"
+              "odd": "1.73"
             },
             {
               "outcome": "Mario Sergio - 1+",
@@ -11122,15 +11143,15 @@
             },
             {
               "outcome": "Helder Maciel - 1+",
-              "odd": "1.91"
+              "odd": "2.25"
             },
             {
               "outcome": "Luizao Oliveira - 1+",
-              "odd": "1.83"
+              "odd": "2.00"
             },
             {
               "outcome": "Rodrigo Andrade - 1+",
-              "odd": "1.83"
+              "odd": "2.00"
             },
             {
               "outcome": "Jemerson - 1+",
@@ -11138,51 +11159,51 @@
             },
             {
               "outcome": "Daniel Amorim - 2+",
-              "odd": "1.06"
+              "odd": "1.08"
             },
             {
               "outcome": "Luis Echapora - 2+",
-              "odd": "1.28"
-            },
-            {
-              "outcome": "Fabricio Daniel - 2+",
-              "odd": "1.33"
-            },
-            {
-              "outcome": "Lucas Rian - 2+",
-              "odd": "1.40"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 2+",
               "odd": "1.36"
             },
             {
+              "outcome": "Fabricio Daniel - 2+",
+              "odd": "1.36"
+            },
+            {
+              "outcome": "Lucas Rian - 2+",
+              "odd": "1.44"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 2+",
+              "odd": "1.53"
+            },
+            {
               "outcome": "Hyoran - 2+",
-              "odd": "1.50"
+              "odd": "1.62"
             },
             {
               "outcome": "Felipe Garcia - 2+",
-              "odd": "1.44"
+              "odd": "1.50"
             },
             {
               "outcome": "Pablo Dyego - 2+",
-              "odd": "1.44"
+              "odd": "1.53"
             },
             {
               "outcome": "Lopes Pedrinho - 2+",
-              "odd": "1.67"
+              "odd": "1.83"
             },
             {
               "outcome": "Roque Daniel Davi - 2+",
-              "odd": "1.80"
+              "odd": "2.10"
             },
             {
               "outcome": "Dudu Miraima - 2+",
-              "odd": "1.73"
+              "odd": "1.83"
             },
             {
               "outcome": "Hugo Sanches - 2+",
-              "odd": "1.83"
+              "odd": "2.00"
             },
             {
               "outcome": "Marcao Silva - 2+",
@@ -11190,7 +11211,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 2+",
-              "odd": "2.38"
+              "odd": "2.62"
             },
             {
               "outcome": "Ocimar Junior Urso - 2+",
@@ -11202,15 +11223,15 @@
             },
             {
               "outcome": "Lucas Fernandes - 2+",
-              "odd": "2.38"
-            },
-            {
-              "outcome": "Guilherme Foguinho - 2+",
               "odd": "2.62"
             },
             {
+              "outcome": "Guilherme Foguinho - 2+",
+              "odd": "3.00"
+            },
+            {
               "outcome": "Anderson Para - 2+",
-              "odd": "3.40"
+              "odd": "4.33"
             },
             {
               "outcome": "Mario Sergio - 2+",
@@ -11230,15 +11251,15 @@
             },
             {
               "outcome": "Helder Maciel - 2+",
-              "odd": "5.50"
+              "odd": "7.00"
             },
             {
               "outcome": "Luizao Oliveira - 2+",
-              "odd": "5.00"
+              "odd": "5.50"
             },
             {
               "outcome": "Rodrigo Andrade - 2+",
-              "odd": "5.00"
+              "odd": "5.50"
             },
             {
               "outcome": "Jemerson - 2+",
@@ -11246,51 +11267,51 @@
             },
             {
               "outcome": "Daniel Amorim - 3+",
-              "odd": "1.22"
+              "odd": "1.30"
             },
             {
               "outcome": "Luis Echapora - 3+",
-              "odd": "1.80"
-            },
-            {
-              "outcome": "Fabricio Daniel - 3+",
-              "odd": "1.91"
-            },
-            {
-              "outcome": "Lucas Rian - 3+",
-              "odd": "2.10"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 3+",
               "odd": "2.00"
             },
             {
+              "outcome": "Fabricio Daniel - 3+",
+              "odd": "2.10"
+            },
+            {
+              "outcome": "Lucas Rian - 3+",
+              "odd": "2.25"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 3+",
+              "odd": "2.62"
+            },
+            {
               "outcome": "Hyoran - 3+",
-              "odd": "2.50"
-            },
-            {
-              "outcome": "Felipe Garcia - 3+",
-              "odd": "2.25"
-            },
-            {
-              "outcome": "Pablo Dyego - 3+",
-              "odd": "2.25"
-            },
-            {
-              "outcome": "Lopes Pedrinho - 3+",
               "odd": "2.75"
             },
             {
+              "outcome": "Felipe Garcia - 3+",
+              "odd": "2.50"
+            },
+            {
+              "outcome": "Pablo Dyego - 3+",
+              "odd": "2.50"
+            },
+            {
+              "outcome": "Lopes Pedrinho - 3+",
+              "odd": "3.40"
+            },
+            {
               "outcome": "Roque Daniel Davi - 3+",
-              "odd": "3.25"
+              "odd": "4.33"
             },
             {
               "outcome": "Dudu Miraima - 3+",
-              "odd": "3.00"
+              "odd": "3.50"
             },
             {
               "outcome": "Hugo Sanches - 3+",
-              "odd": "3.40"
+              "odd": "4.00"
             },
             {
               "outcome": "Marcao Silva - 3+",
@@ -11298,7 +11319,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 3+",
-              "odd": "5.00"
+              "odd": "6.00"
             },
             {
               "outcome": "Ocimar Junior Urso - 3+",
@@ -11310,15 +11331,15 @@
             },
             {
               "outcome": "Lucas Fernandes - 3+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Guilherme Foguinho - 3+",
               "odd": "6.00"
             },
             {
+              "outcome": "Guilherme Foguinho - 3+",
+              "odd": "7.00"
+            },
+            {
               "outcome": "Anderson Para - 3+",
-              "odd": "9.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Mario Sergio - 3+",
@@ -11338,15 +11359,15 @@
             },
             {
               "outcome": "Helder Maciel - 3+",
-              "odd": "17.00"
+              "odd": "21.00"
             },
             {
               "outcome": "Luizao Oliveira - 3+",
-              "odd": "15.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Rodrigo Andrade - 3+",
-              "odd": "15.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Jemerson - 3+",
@@ -11354,51 +11375,51 @@
             },
             {
               "outcome": "Daniel Amorim - 4+",
-              "odd": "1.57"
+              "odd": "1.73"
             },
             {
               "outcome": "Luis Echapora - 4+",
-              "odd": "3.00"
-            },
-            {
-              "outcome": "Fabricio Daniel - 4+",
-              "odd": "3.40"
-            },
-            {
-              "outcome": "Lucas Rian - 4+",
-              "odd": "3.75"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 4+",
               "odd": "3.50"
             },
             {
+              "outcome": "Fabricio Daniel - 4+",
+              "odd": "3.75"
+            },
+            {
+              "outcome": "Lucas Rian - 4+",
+              "odd": "4.00"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 4+",
+              "odd": "5.00"
+            },
+            {
               "outcome": "Hyoran - 4+",
-              "odd": "4.50"
+              "odd": "5.50"
             },
             {
               "outcome": "Felipe Garcia - 4+",
-              "odd": "4.00"
+              "odd": "4.50"
             },
             {
               "outcome": "Pablo Dyego - 4+",
-              "odd": "4.00"
+              "odd": "4.50"
             },
             {
               "outcome": "Lopes Pedrinho - 4+",
-              "odd": "6.00"
+              "odd": "7.00"
             },
             {
               "outcome": "Roque Daniel Davi - 4+",
-              "odd": "7.00"
+              "odd": "10.00"
             },
             {
               "outcome": "Dudu Miraima - 4+",
-              "odd": "6.00"
+              "odd": "8.00"
             },
             {
               "outcome": "Hugo Sanches - 4+",
-              "odd": "7.00"
+              "odd": "9.00"
             },
             {
               "outcome": "Marcao Silva - 4+",
@@ -11406,7 +11427,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 4+",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Ocimar Junior Urso - 4+",
@@ -11418,103 +11439,103 @@
             },
             {
               "outcome": "Lucas Fernandes - 4+",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Guilherme Foguinho - 4+",
-              "odd": "15.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Daniel Amorim - 5+",
-              "odd": "2.20"
+              "odd": "2.62"
             },
             {
               "outcome": "Luis Echapora - 5+",
-              "odd": "5.50"
+              "odd": "7.00"
             },
             {
               "outcome": "Fabricio Daniel - 5+",
-              "odd": "6.50"
+              "odd": "7.00"
             },
             {
               "outcome": "Lucas Rian - 5+",
-              "odd": "7.00"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 5+",
-              "odd": "7.00"
-            },
-            {
-              "outcome": "Hyoran - 5+",
-              "odd": "10.00"
-            },
-            {
-              "outcome": "Felipe Garcia - 5+",
-              "odd": "8.00"
-            },
-            {
-              "outcome": "Pablo Dyego - 5+",
               "odd": "9.00"
             },
             {
-              "outcome": "Lopes Pedrinho - 5+",
-              "odd": "13.00"
-            },
-            {
-              "outcome": "Roque Daniel Davi - 5+",
-              "odd": "15.00"
-            },
-            {
-              "outcome": "Dudu Miraima - 5+",
-              "odd": "13.00"
-            },
-            {
-              "outcome": "Hugo Sanches - 5+",
-              "odd": "17.00"
-            },
-            {
-              "outcome": "Daniel Amorim - 6+",
-              "odd": "3.50"
-            },
-            {
-              "outcome": "Luis Echapora - 6+",
+              "outcome": "Pedro Vitor Ferreira - 5+",
               "odd": "11.00"
             },
             {
-              "outcome": "Fabricio Daniel - 6+",
+              "outcome": "Hyoran - 5+",
               "odd": "13.00"
             },
             {
-              "outcome": "Lucas Rian - 6+",
-              "odd": "15.00"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 6+",
-              "odd": "15.00"
-            },
-            {
-              "outcome": "Hyoran - 6+",
-              "odd": "19.00"
-            },
-            {
-              "outcome": "Felipe Garcia - 6+",
-              "odd": "17.00"
-            },
-            {
-              "outcome": "Pablo Dyego - 6+",
-              "odd": "17.00"
-            },
-            {
-              "outcome": "Daniel Amorim - 7+",
-              "odd": "6.00"
-            },
-            {
-              "outcome": "Daniel Amorim - 8+",
+              "outcome": "Felipe Garcia - 5+",
               "odd": "10.00"
             },
             {
-              "outcome": "Daniel Amorim - 9+",
+              "outcome": "Pablo Dyego - 5+",
+              "odd": "10.00"
+            },
+            {
+              "outcome": "Lopes Pedrinho - 5+",
+              "odd": "17.00"
+            },
+            {
+              "outcome": "Roque Daniel Davi - 5+",
+              "odd": "21.00"
+            },
+            {
+              "outcome": "Dudu Miraima - 5+",
+              "odd": "17.00"
+            },
+            {
+              "outcome": "Hugo Sanches - 5+",
+              "odd": "21.00"
+            },
+            {
+              "outcome": "Daniel Amorim - 6+",
+              "odd": "4.00"
+            },
+            {
+              "outcome": "Luis Echapora - 6+",
+              "odd": "15.00"
+            },
+            {
+              "outcome": "Fabricio Daniel - 6+",
+              "odd": "15.00"
+            },
+            {
+              "outcome": "Lucas Rian - 6+",
+              "odd": "17.00"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 6+",
+              "odd": "21.00"
+            },
+            {
+              "outcome": "Hyoran - 6+",
+              "odd": "21.00"
+            },
+            {
+              "outcome": "Felipe Garcia - 6+",
               "odd": "19.00"
+            },
+            {
+              "outcome": "Pablo Dyego - 6+",
+              "odd": "21.00"
+            },
+            {
+              "outcome": "Daniel Amorim - 7+",
+              "odd": "7.00"
+            },
+            {
+              "outcome": "Daniel Amorim - 8+",
+              "odd": "13.00"
+            },
+            {
+              "outcome": "Daniel Amorim - 9+",
+              "odd": "21.00"
             },
             {
               "outcome": "Fabricio Daniel - 7+",
@@ -11578,31 +11599,31 @@
             },
             {
               "outcome": "Neto Costa - 1+",
-              "odd": "1.04"
+              "odd": "1.05"
             },
             {
               "outcome": "Neto Costa - 2+",
-              "odd": "1.22"
+              "odd": "1.28"
             },
             {
               "outcome": "Neto Costa - 3+",
-              "odd": "1.67"
+              "odd": "1.80"
             },
             {
               "outcome": "Neto Costa - 4+",
-              "odd": "2.50"
+              "odd": "3.00"
             },
             {
               "outcome": "Neto Costa - 5+",
-              "odd": "4.33"
+              "odd": "5.50"
             },
             {
               "outcome": "Neto Costa - 6+",
-              "odd": "8.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Neto Costa - 7+",
-              "odd": "17.00"
+              "odd": "21.00"
             },
             {
               "outcome": "Neto Costa - 8+",
@@ -11610,23 +11631,23 @@
             },
             {
               "outcome": "Filho Hwaskar - 1+",
-              "odd": "1.17"
+              "odd": "1.25"
             },
             {
               "outcome": "Filho Hwaskar - 2+",
-              "odd": "1.80"
+              "odd": "2.10"
             },
             {
               "outcome": "Filho Hwaskar - 3+",
-              "odd": "3.25"
+              "odd": "4.33"
             },
             {
               "outcome": "Filho Hwaskar - 4+",
-              "odd": "7.00"
+              "odd": "10.00"
             },
             {
               "outcome": "Filho Hwaskar - 5+",
-              "odd": "15.00"
+              "odd": "21.00"
             }
           ],
           "Away Player Shots": [
@@ -11644,11 +11665,11 @@
             },
             {
               "outcome": "Yamil Asad - 1+",
-              "odd": "1.17"
+              "odd": "1.12"
             },
             {
               "outcome": "Mateus Santos - 1+",
-              "odd": "1.18"
+              "odd": "1.14"
             },
             {
               "outcome": "Victor Barbara - 1+",
@@ -11656,7 +11677,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 1+",
-              "odd": "1.17"
+              "odd": "1.20"
             },
             {
               "outcome": "David Miguel Arcanjo - 1+",
@@ -11664,7 +11685,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 1+",
-              "odd": "1.22"
+              "odd": "1.28"
             },
             {
               "outcome": "Calebe Costa - 1+",
@@ -11680,7 +11701,7 @@
             },
             {
               "outcome": "Alan Empereur - 1+",
-              "odd": "1.57"
+              "odd": "1.40"
             },
             {
               "outcome": "Lorenzo Martins - 1+",
@@ -11696,7 +11717,7 @@
             },
             {
               "outcome": "Pepe Vilardi - 1+",
-              "odd": "1.67"
+              "odd": "1.57"
             },
             {
               "outcome": "Eric Almeida - 1+",
@@ -11708,15 +11729,15 @@
             },
             {
               "outcome": "Raul Goncalves - 1+",
-              "odd": "2.00"
+              "odd": "1.83"
             },
             {
               "outcome": "Joao Vitor Araujo - 1+",
-              "odd": "2.25"
+              "odd": "2.00"
             },
             {
               "outcome": "Pedro Felipetto - 1+",
-              "odd": "2.25"
+              "odd": "2.00"
             },
             {
               "outcome": "Luis Luisao - 1+",
@@ -11748,11 +11769,11 @@
             },
             {
               "outcome": "Yamil Asad - 2+",
-              "odd": "1.73"
+              "odd": "1.53"
             },
             {
               "outcome": "Mateus Santos - 2+",
-              "odd": "1.83"
+              "odd": "1.67"
             },
             {
               "outcome": "Victor Barbara - 2+",
@@ -11760,7 +11781,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 2+",
-              "odd": "1.73"
+              "odd": "1.83"
             },
             {
               "outcome": "David Miguel Arcanjo - 2+",
@@ -11768,7 +11789,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 2+",
-              "odd": "1.91"
+              "odd": "2.20"
             },
             {
               "outcome": "Calebe Costa - 2+",
@@ -11784,7 +11805,7 @@
             },
             {
               "outcome": "Alan Empereur - 2+",
-              "odd": "3.50"
+              "odd": "2.75"
             },
             {
               "outcome": "Lorenzo Martins - 2+",
@@ -11800,7 +11821,7 @@
             },
             {
               "outcome": "Pepe Vilardi - 2+",
-              "odd": "3.75"
+              "odd": "3.50"
             },
             {
               "outcome": "Eric Almeida - 2+",
@@ -11812,15 +11833,15 @@
             },
             {
               "outcome": "Raul Goncalves - 2+",
-              "odd": "5.50"
+              "odd": "5.00"
             },
             {
               "outcome": "Joao Vitor Araujo - 2+",
-              "odd": "8.00"
+              "odd": "5.50"
             },
             {
               "outcome": "Pedro Felipetto - 2+",
-              "odd": "8.00"
+              "odd": "5.50"
             },
             {
               "outcome": "Luis Luisao - 2+",
@@ -11852,11 +11873,11 @@
             },
             {
               "outcome": "Yamil Asad - 3+",
-              "odd": "3.00"
+              "odd": "2.62"
             },
             {
               "outcome": "Mateus Santos - 3+",
-              "odd": "3.40"
+              "odd": "2.75"
             },
             {
               "outcome": "Victor Barbara - 3+",
@@ -11864,7 +11885,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 3+",
-              "odd": "3.00"
+              "odd": "3.50"
             },
             {
               "outcome": "David Miguel Arcanjo - 3+",
@@ -11872,7 +11893,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 3+",
-              "odd": "3.75"
+              "odd": "4.50"
             },
             {
               "outcome": "Calebe Costa - 3+",
@@ -11888,7 +11909,7 @@
             },
             {
               "outcome": "Alan Empereur - 3+",
-              "odd": "10.00"
+              "odd": "6.50"
             },
             {
               "outcome": "Lorenzo Martins - 3+",
@@ -11904,7 +11925,7 @@
             },
             {
               "outcome": "Pepe Vilardi - 3+",
-              "odd": "11.00"
+              "odd": "10.00"
             },
             {
               "outcome": "Eric Almeida - 3+",
@@ -11916,15 +11937,15 @@
             },
             {
               "outcome": "Raul Goncalves - 3+",
-              "odd": "19.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Joao Vitor Araujo - 3+",
-              "odd": "21.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Pedro Felipetto - 3+",
-              "odd": "21.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Luis Luisao - 3+",
@@ -11956,11 +11977,11 @@
             },
             {
               "outcome": "Yamil Asad - 4+",
-              "odd": "6.00"
+              "odd": "5.00"
             },
             {
               "outcome": "Mateus Santos - 4+",
-              "odd": "7.00"
+              "odd": "6.00"
             },
             {
               "outcome": "Victor Barbara - 4+",
@@ -11968,7 +11989,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 4+",
-              "odd": "6.00"
+              "odd": "8.00"
             },
             {
               "outcome": "David Miguel Arcanjo - 4+",
@@ -11976,7 +11997,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 4+",
-              "odd": "9.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Calebe Costa - 4+",
@@ -11992,7 +12013,7 @@
             },
             {
               "outcome": "Alan Empereur - 4+",
-              "odd": "21.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Lorenzo Martins - 4+",
@@ -12012,19 +12033,19 @@
             },
             {
               "outcome": "Yamil Asad - 5+",
-              "odd": "13.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Mateus Santos - 5+",
-              "odd": "17.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Victor Barbara - 5+",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Eliel Chrystian - 5+",
-              "odd": "13.00"
+              "odd": "17.00"
             },
             {
               "outcome": "David Miguel Arcanjo - 5+",
@@ -12032,7 +12053,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 5+",
-              "odd": "19.00"
+              "odd": "21.00"
             },
             {
               "outcome": "Vinicius Peixoto - 6+",
@@ -12126,7 +12147,7 @@
             },
             {
               "outcome": "Rodrigo Rodrigues - 1+",
-              "odd": "1.73"
+              "odd": "1.67"
             },
             {
               "outcome": "Marcolino Luiz Otavio - 1+",
@@ -12134,11 +12155,11 @@
             },
             {
               "outcome": "Yamil Asad - 1+",
-              "odd": "2.10"
+              "odd": "1.91"
             },
             {
               "outcome": "Mateus Santos - 1+",
-              "odd": "2.50"
+              "odd": "2.25"
             },
             {
               "outcome": "Victor Barbara - 1+",
@@ -12146,7 +12167,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 1+",
-              "odd": "2.10"
+              "odd": "2.25"
             },
             {
               "outcome": "David Miguel Arcanjo - 1+",
@@ -12154,7 +12175,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 1+",
-              "odd": "2.50"
+              "odd": "2.62"
             },
             {
               "outcome": "Calebe Costa - 1+",
@@ -12170,7 +12191,7 @@
             },
             {
               "outcome": "Alan Empereur - 1+",
-              "odd": "4.50"
+              "odd": "3.40"
             },
             {
               "outcome": "Lorenzo Martins - 1+",
@@ -12186,7 +12207,7 @@
             },
             {
               "outcome": "Pepe Vilardi - 1+",
-              "odd": "3.50"
+              "odd": "3.40"
             },
             {
               "outcome": "Eric Almeida - 1+",
@@ -12198,15 +12219,15 @@
             },
             {
               "outcome": "Raul Goncalves - 1+",
-              "odd": "4.33"
+              "odd": "3.75"
             },
             {
               "outcome": "Joao Vitor Araujo - 1+",
-              "odd": "6.00"
+              "odd": "4.33"
             },
             {
               "outcome": "Pedro Felipetto - 1+",
-              "odd": "6.00"
+              "odd": "4.33"
             },
             {
               "outcome": "Luis Luisao - 1+",
@@ -12230,7 +12251,7 @@
             },
             {
               "outcome": "Rodrigo Rodrigues - 2+",
-              "odd": "4.50"
+              "odd": "4.33"
             },
             {
               "outcome": "Marcolino Luiz Otavio - 2+",
@@ -12238,11 +12259,11 @@
             },
             {
               "outcome": "Yamil Asad - 2+",
-              "odd": "7.00"
+              "odd": "6.00"
             },
             {
               "outcome": "Mateus Santos - 2+",
-              "odd": "10.00"
+              "odd": "9.00"
             },
             {
               "outcome": "Victor Barbara - 2+",
@@ -12250,7 +12271,7 @@
             },
             {
               "outcome": "Eliel Chrystian - 2+",
-              "odd": "7.00"
+              "odd": "8.00"
             },
             {
               "outcome": "David Miguel Arcanjo - 2+",
@@ -12258,7 +12279,7 @@
             },
             {
               "outcome": "Hernandes da Silva - 2+",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Calebe Costa - 2+",
@@ -12274,7 +12295,7 @@
             },
             {
               "outcome": "Alan Empereur - 2+",
-              "odd": "21.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Lorenzo Martins - 2+",
@@ -12290,7 +12311,7 @@
             },
             {
               "outcome": "Pepe Vilardi - 2+",
-              "odd": "19.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Eric Almeida - 2+",
@@ -12334,51 +12355,51 @@
             },
             {
               "outcome": "Daniel Amorim - 1+",
-              "odd": "1.30"
+              "odd": "1.36"
             },
             {
               "outcome": "Luis Echapora - 1+",
-              "odd": "1.57"
+              "odd": "1.67"
             },
             {
               "outcome": "Fabricio Daniel - 1+",
-              "odd": "1.57"
-            },
-            {
-              "outcome": "Lucas Rian - 1+",
-              "odd": "1.57"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 1+",
               "odd": "1.62"
             },
             {
+              "outcome": "Lucas Rian - 1+",
+              "odd": "1.67"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 1+",
+              "odd": "1.80"
+            },
+            {
               "outcome": "Hyoran - 1+",
-              "odd": "1.73"
-            },
-            {
-              "outcome": "Felipe Garcia - 1+",
-              "odd": "1.67"
-            },
-            {
-              "outcome": "Pablo Dyego - 1+",
-              "odd": "1.67"
-            },
-            {
-              "outcome": "Lopes Pedrinho - 1+",
               "odd": "1.83"
             },
             {
-              "outcome": "Roque Daniel Davi - 1+",
+              "outcome": "Felipe Garcia - 1+",
+              "odd": "1.73"
+            },
+            {
+              "outcome": "Pablo Dyego - 1+",
+              "odd": "1.73"
+            },
+            {
+              "outcome": "Lopes Pedrinho - 1+",
               "odd": "2.00"
+            },
+            {
+              "outcome": "Roque Daniel Davi - 1+",
+              "odd": "2.25"
             },
             {
               "outcome": "Dudu Miraima - 1+",
-              "odd": "2.00"
+              "odd": "2.20"
             },
             {
               "outcome": "Hugo Sanches - 1+",
-              "odd": "2.00"
+              "odd": "2.20"
             },
             {
               "outcome": "Marcao Silva - 1+",
@@ -12386,7 +12407,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 1+",
-              "odd": "2.62"
+              "odd": "2.75"
             },
             {
               "outcome": "Ocimar Junior Urso - 1+",
@@ -12398,43 +12419,43 @@
             },
             {
               "outcome": "Lucas Fernandes - 1+",
-              "odd": "2.50"
-            },
-            {
-              "outcome": "Guilherme Foguinho - 1+",
               "odd": "2.62"
             },
             {
+              "outcome": "Guilherme Foguinho - 1+",
+              "odd": "2.75"
+            },
+            {
               "outcome": "Anderson Para - 1+",
-              "odd": "3.50"
+              "odd": "5.00"
             },
             {
               "outcome": "Mario Sergio - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Wellington Carioca Filho - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Matheus Salustiano - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Augusto Silva - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Helder Maciel - 1+",
               "odd": "4.33"
             },
             {
+              "outcome": "Wellington Carioca Filho - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Matheus Salustiano - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Augusto Silva - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Helder Maciel - 1+",
+              "odd": "5.00"
+            },
+            {
               "outcome": "Luizao Oliveira - 1+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Rodrigo Andrade - 1+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Jemerson - 1+",
@@ -12442,51 +12463,51 @@
             },
             {
               "outcome": "Daniel Amorim - 2+",
-              "odd": "2.50"
+              "odd": "2.75"
             },
             {
               "outcome": "Luis Echapora - 2+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Fabricio Daniel - 2+",
-              "odd": "3.75"
-            },
-            {
-              "outcome": "Lucas Rian - 2+",
-              "odd": "3.75"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 2+",
               "odd": "4.00"
             },
             {
+              "outcome": "Lucas Rian - 2+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 2+",
+              "odd": "5.50"
+            },
+            {
               "outcome": "Hyoran - 2+",
-              "odd": "4.50"
+              "odd": "5.50"
             },
             {
               "outcome": "Felipe Garcia - 2+",
-              "odd": "4.33"
+              "odd": "5.00"
             },
             {
               "outcome": "Pablo Dyego - 2+",
-              "odd": "4.33"
+              "odd": "4.50"
             },
             {
               "outcome": "Lopes Pedrinho - 2+",
-              "odd": "6.00"
+              "odd": "7.00"
             },
             {
               "outcome": "Roque Daniel Davi - 2+",
-              "odd": "6.50"
+              "odd": "8.00"
             },
             {
               "outcome": "Dudu Miraima - 2+",
-              "odd": "7.00"
+              "odd": "8.00"
             },
             {
               "outcome": "Hugo Sanches - 2+",
-              "odd": "7.00"
+              "odd": "8.00"
             },
             {
               "outcome": "Marcao Silva - 2+",
@@ -12494,7 +12515,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 2+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Ocimar Junior Urso - 2+",
@@ -12506,11 +12527,11 @@
             },
             {
               "outcome": "Lucas Fernandes - 2+",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Guilherme Foguinho - 2+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Anderson Para - 2+",
@@ -12546,31 +12567,31 @@
             },
             {
               "outcome": "Daniel Amorim - 3+",
-              "odd": "6.00"
+              "odd": "7.00"
             },
             {
               "outcome": "Luis Echapora - 3+",
-              "odd": "11.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Fabricio Daniel - 3+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Lucas Rian - 3+",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Pedro Vitor Ferreira - 3+",
-              "odd": "13.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Hyoran - 3+",
-              "odd": "15.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Felipe Garcia - 3+",
-              "odd": "15.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Pablo Dyego - 3+",
@@ -12594,7 +12615,7 @@
             },
             {
               "outcome": "Daniel Amorim - 4+",
-              "odd": "17.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Luis Echapora - 4+",
@@ -12618,15 +12639,15 @@
             },
             {
               "outcome": "Neto Costa - 1+",
-              "odd": "1.50"
+              "odd": "1.57"
             },
             {
               "outcome": "Neto Costa - 2+",
-              "odd": "3.40"
+              "odd": "3.75"
             },
             {
               "outcome": "Neto Costa - 3+",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Neto Costa - 4+",
@@ -12634,7 +12655,7 @@
             },
             {
               "outcome": "Filho Hwaskar - 1+",
-              "odd": "2.00"
+              "odd": "2.25"
             },
             {
               "outcome": "Aiyran Vieira - 1+",
@@ -12642,7 +12663,7 @@
             },
             {
               "outcome": "Filho Hwaskar - 2+",
-              "odd": "6.50"
+              "odd": "8.00"
             },
             {
               "outcome": "Aiyran Vieira - 2+",
@@ -12656,51 +12677,51 @@
           "Home Player Shots On Target Total": [
             {
               "outcome": "Daniel Amorim - 1+",
-              "odd": "1.30"
+              "odd": "1.36"
             },
             {
               "outcome": "Luis Echapora - 1+",
-              "odd": "1.57"
+              "odd": "1.67"
             },
             {
               "outcome": "Fabricio Daniel - 1+",
-              "odd": "1.57"
-            },
-            {
-              "outcome": "Lucas Rian - 1+",
-              "odd": "1.57"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 1+",
               "odd": "1.62"
             },
             {
+              "outcome": "Lucas Rian - 1+",
+              "odd": "1.67"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 1+",
+              "odd": "1.80"
+            },
+            {
               "outcome": "Hyoran - 1+",
-              "odd": "1.73"
-            },
-            {
-              "outcome": "Felipe Garcia - 1+",
-              "odd": "1.67"
-            },
-            {
-              "outcome": "Pablo Dyego - 1+",
-              "odd": "1.67"
-            },
-            {
-              "outcome": "Lopes Pedrinho - 1+",
               "odd": "1.83"
             },
             {
-              "outcome": "Roque Daniel Davi - 1+",
+              "outcome": "Felipe Garcia - 1+",
+              "odd": "1.73"
+            },
+            {
+              "outcome": "Pablo Dyego - 1+",
+              "odd": "1.73"
+            },
+            {
+              "outcome": "Lopes Pedrinho - 1+",
               "odd": "2.00"
+            },
+            {
+              "outcome": "Roque Daniel Davi - 1+",
+              "odd": "2.25"
             },
             {
               "outcome": "Dudu Miraima - 1+",
-              "odd": "2.00"
+              "odd": "2.20"
             },
             {
               "outcome": "Hugo Sanches - 1+",
-              "odd": "2.00"
+              "odd": "2.20"
             },
             {
               "outcome": "Marcao Silva - 1+",
@@ -12708,7 +12729,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 1+",
-              "odd": "2.62"
+              "odd": "2.75"
             },
             {
               "outcome": "Ocimar Junior Urso - 1+",
@@ -12720,43 +12741,43 @@
             },
             {
               "outcome": "Lucas Fernandes - 1+",
-              "odd": "2.50"
-            },
-            {
-              "outcome": "Guilherme Foguinho - 1+",
               "odd": "2.62"
             },
             {
+              "outcome": "Guilherme Foguinho - 1+",
+              "odd": "2.75"
+            },
+            {
               "outcome": "Anderson Para - 1+",
-              "odd": "3.50"
+              "odd": "5.00"
             },
             {
               "outcome": "Mario Sergio - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Wellington Carioca Filho - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Matheus Salustiano - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Augusto Silva - 1+",
-              "odd": "5.00"
-            },
-            {
-              "outcome": "Helder Maciel - 1+",
               "odd": "4.33"
             },
             {
+              "outcome": "Wellington Carioca Filho - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Matheus Salustiano - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Augusto Silva - 1+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Helder Maciel - 1+",
+              "odd": "5.00"
+            },
+            {
               "outcome": "Luizao Oliveira - 1+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Rodrigo Andrade - 1+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Jemerson - 1+",
@@ -12764,51 +12785,51 @@
             },
             {
               "outcome": "Daniel Amorim - 2+",
-              "odd": "2.50"
+              "odd": "2.75"
             },
             {
               "outcome": "Luis Echapora - 2+",
-              "odd": "3.75"
+              "odd": "4.33"
             },
             {
               "outcome": "Fabricio Daniel - 2+",
-              "odd": "3.75"
-            },
-            {
-              "outcome": "Lucas Rian - 2+",
-              "odd": "3.75"
-            },
-            {
-              "outcome": "Pedro Vitor Ferreira - 2+",
               "odd": "4.00"
             },
             {
+              "outcome": "Lucas Rian - 2+",
+              "odd": "4.33"
+            },
+            {
+              "outcome": "Pedro Vitor Ferreira - 2+",
+              "odd": "5.50"
+            },
+            {
               "outcome": "Hyoran - 2+",
-              "odd": "4.50"
+              "odd": "5.50"
             },
             {
               "outcome": "Felipe Garcia - 2+",
-              "odd": "4.33"
+              "odd": "5.00"
             },
             {
               "outcome": "Pablo Dyego - 2+",
-              "odd": "4.33"
+              "odd": "4.50"
             },
             {
               "outcome": "Lopes Pedrinho - 2+",
-              "odd": "6.00"
+              "odd": "7.00"
             },
             {
               "outcome": "Roque Daniel Davi - 2+",
-              "odd": "6.50"
+              "odd": "8.00"
             },
             {
               "outcome": "Dudu Miraima - 2+",
-              "odd": "7.00"
+              "odd": "8.00"
             },
             {
               "outcome": "Hugo Sanches - 2+",
-              "odd": "7.00"
+              "odd": "8.00"
             },
             {
               "outcome": "Marcao Silva - 2+",
@@ -12816,7 +12837,7 @@
             },
             {
               "outcome": "Romisson dos Santos - 2+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Ocimar Junior Urso - 2+",
@@ -12828,11 +12849,11 @@
             },
             {
               "outcome": "Lucas Fernandes - 2+",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Guilherme Foguinho - 2+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Anderson Para - 2+",
@@ -12868,31 +12889,31 @@
             },
             {
               "outcome": "Daniel Amorim - 3+",
-              "odd": "6.00"
+              "odd": "7.00"
             },
             {
               "outcome": "Luis Echapora - 3+",
-              "odd": "11.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Fabricio Daniel - 3+",
-              "odd": "11.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Lucas Rian - 3+",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Pedro Vitor Ferreira - 3+",
-              "odd": "13.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Hyoran - 3+",
-              "odd": "15.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Felipe Garcia - 3+",
-              "odd": "15.00"
+              "odd": "17.00"
             },
             {
               "outcome": "Pablo Dyego - 3+",
@@ -12916,7 +12937,7 @@
             },
             {
               "outcome": "Daniel Amorim - 4+",
-              "odd": "17.00"
+              "odd": "19.00"
             },
             {
               "outcome": "Luis Echapora - 4+",
@@ -12928,15 +12949,15 @@
             },
             {
               "outcome": "Neto Costa - 1+",
-              "odd": "1.50"
+              "odd": "1.57"
             },
             {
               "outcome": "Neto Costa - 2+",
-              "odd": "3.40"
+              "odd": "3.75"
             },
             {
               "outcome": "Neto Costa - 3+",
-              "odd": "10.00"
+              "odd": "11.00"
             },
             {
               "outcome": "Neto Costa - 4+",
@@ -12944,11 +12965,11 @@
             },
             {
               "outcome": "Filho Hwaskar - 1+",
-              "odd": "2.00"
+              "odd": "2.25"
             },
             {
               "outcome": "Filho Hwaskar - 2+",
-              "odd": "6.50"
+              "odd": "8.00"
             },
             {
               "outcome": "Filho Hwaskar - 3+",
@@ -12970,7 +12991,7 @@
             },
             {
               "outcome": "Vinicius Peixoto",
-              "odd": "15.00"
+              "odd": "13.00"
             },
             {
               "outcome": "Luis Luisao",
@@ -12978,11 +12999,11 @@
             },
             {
               "outcome": "Pepe Vilardi",
-              "odd": "101.00"
+              "odd": "81.00"
             },
             {
               "outcome": "Victor Barbara",
-              "odd": "34.00"
+              "odd": "29.00"
             },
             {
               "outcome": "Lorenzo Martins",
@@ -13006,7 +13027,7 @@
             },
             {
               "outcome": "Yamil Asad",
-              "odd": "41.00"
+              "odd": "34.00"
             },
             {
               "outcome": "Ocimar Junior Urso",
@@ -13018,11 +13039,11 @@
             },
             {
               "outcome": "Mario Sergio",
-              "odd": "101.00"
+              "odd": "126.00"
             },
             {
               "outcome": "Jean Dias",
-              "odd": "29.00"
+              "odd": "26.00"
             },
             {
               "outcome": "Gabriel Knesowitsch",
@@ -13034,19 +13055,19 @@
             },
             {
               "outcome": "Dudu Miraima",
-              "odd": "41.00"
+              "odd": "51.00"
             },
             {
               "outcome": "Daniel Amorim",
-              "odd": "6.50"
+              "odd": "7.00"
             },
             {
               "outcome": "Neto Costa",
-              "odd": "19.00"
+              "odd": "21.00"
             },
             {
               "outcome": "Rodrigo Rodrigues",
-              "odd": "13.00"
+              "odd": "12.00"
             },
             {
               "outcome": "Marlon do Nascimento",
@@ -13070,7 +13091,7 @@
           "To Win From Behind": [
             {
               "outcome": "Home",
-              "odd": "13.00"
+              "odd": "15.00"
             },
             {
               "outcome": "Away",
@@ -13184,21 +13205,21 @@
           "Match Winner": [
             {
               "outcome": "Home",
-              "odd": "2.42"
+              "odd": "2.65"
             },
             {
               "outcome": "Draw",
-              "odd": "2.92"
+              "odd": "2.87"
             },
             {
               "outcome": "Away",
-              "odd": "3.25"
+              "odd": "2.95"
             }
           ],
           "Second Half Winner": [
             {
               "outcome": "Home",
-              "odd": "2.85"
+              "odd": "3.05"
             },
             {
               "outcome": "Draw",
@@ -13206,79 +13227,79 @@
             },
             {
               "outcome": "Away",
-              "odd": "3.50"
+              "odd": "3.30"
             }
           ],
           "Asian Handicap": [
             {
               "outcome": "Home -0.75",
-              "odd": "2.90"
+              "odd": "2.95"
             },
             {
               "outcome": "Away -0.75",
-              "odd": "1.40"
+              "odd": "1.39"
             },
             {
               "outcome": "Home -0.5",
-              "odd": "2.35"
+              "odd": "2.55"
             },
             {
               "outcome": "Away -0.5",
-              "odd": "1.57"
+              "odd": "1.50"
             },
             {
               "outcome": "Home -0.25",
-              "odd": "2.02"
+              "odd": "2.18"
             },
             {
               "outcome": "Away -0.25",
-              "odd": "1.78"
+              "odd": "1.67"
             },
             {
               "outcome": "Home +0.25",
-              "odd": "1.47"
+              "odd": "1.55"
             },
             {
               "outcome": "Away +0.25",
-              "odd": "2.65"
+              "odd": "2.42"
             },
             {
               "outcome": "Home +0.5",
-              "odd": "1.38"
+              "odd": "1.42"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "3.00"
+              "odd": "2.85"
             }
           ],
           "Goals Over/Under": [
             {
               "outcome": "Over 1.5",
-              "odd": "1.57"
+              "odd": "1.60"
             },
             {
               "outcome": "Under 1.5",
-              "odd": "2.35"
+              "odd": "2.30"
             },
             {
               "outcome": "Over 1.75",
-              "odd": "1.75"
+              "odd": "1.78"
             },
             {
               "outcome": "Under 1.75",
-              "odd": "2.05"
+              "odd": "2.02"
             },
             {
               "outcome": "Over 2.0",
-              "odd": "2.05"
+              "odd": "2.07"
             },
             {
               "outcome": "Under 2.0",
-              "odd": "1.75"
+              "odd": "1.72"
             },
             {
               "outcome": "Over 2.25",
-              "odd": "2.40"
+              "odd": "2.42"
             },
             {
               "outcome": "Under 2.25",
@@ -13286,15 +13307,15 @@
             },
             {
               "outcome": "Over 2.5",
-              "odd": "2.72"
+              "odd": "2.75"
             },
             {
               "outcome": "Under 2.5",
-              "odd": "1.45"
+              "odd": "1.44"
             },
             {
               "outcome": "Over 3.5",
-              "odd": "5.00"
+              "odd": "5.10"
             },
             {
               "outcome": "Under 3.5",
@@ -13302,7 +13323,7 @@
             },
             {
               "outcome": "Over 0.5",
-              "odd": "1.13"
+              "odd": "1.14"
             },
             {
               "outcome": "Under 0.5",
@@ -13310,15 +13331,15 @@
             },
             {
               "outcome": "Over 4.5",
-              "odd": "8.75"
+              "odd": "9.00"
             },
             {
               "outcome": "Under 4.5",
-              "odd": "1.05"
+              "odd": "1.04"
             },
             {
               "outcome": "Over 5.5",
-              "odd": "12.00"
+              "odd": "12.50"
             },
             {
               "outcome": "Under 5.5",
@@ -13332,7 +13353,7 @@
             },
             {
               "outcome": "Under 1.5",
-              "odd": "1.25"
+              "odd": "1.24"
             },
             {
               "outcome": "Over 2.5",
@@ -13356,11 +13377,11 @@
             },
             {
               "outcome": "Under 0.75",
-              "odd": "1.83"
+              "odd": "1.82"
             },
             {
               "outcome": "Over 1.0",
-              "odd": "2.67"
+              "odd": "2.70"
             },
             {
               "outcome": "Under 1.0",
@@ -13368,7 +13389,7 @@
             },
             {
               "outcome": "Over 1.25",
-              "odd": "3.30"
+              "odd": "3.35"
             },
             {
               "outcome": "Under 1.25",
@@ -13378,15 +13399,15 @@
           "Goals Over/Under - Second Half": [
             {
               "outcome": "Over 1.5",
-              "odd": "2.75"
+              "odd": "2.80"
             },
             {
               "outcome": "Under 1.5",
-              "odd": "1.44"
+              "odd": "1.42"
             },
             {
               "outcome": "Over 2.5",
-              "odd": "6.30"
+              "odd": "6.40"
             },
             {
               "outcome": "Under 2.5",
@@ -13398,7 +13419,7 @@
             },
             {
               "outcome": "Under 0.5",
-              "odd": "2.90"
+              "odd": "2.87"
             }
           ],
           "Both Teams Score": [
@@ -13414,21 +13435,21 @@
           "Double Chance": [
             {
               "outcome": "Home/Draw",
-              "odd": "1.36"
+              "odd": "1.42"
             },
             {
               "outcome": "Home/Away",
-              "odd": "1.38"
+              "odd": "1.39"
             },
             {
               "outcome": "Draw/Away",
-              "odd": "1.57"
+              "odd": "1.50"
             }
           ],
           "First Half Winner": [
             {
               "outcome": "Home",
-              "odd": "3.15"
+              "odd": "3.40"
             },
             {
               "outcome": "Draw",
@@ -13436,47 +13457,47 @@
             },
             {
               "outcome": "Away",
-              "odd": "4.05"
+              "odd": "3.80"
             }
           ],
           "Asian Handicap First Half": [
             {
               "outcome": "Home -0.5",
-              "odd": "3.20"
+              "odd": "3.40"
             },
             {
               "outcome": "Away -0.5",
-              "odd": "1.34"
+              "odd": "1.31"
             },
             {
               "outcome": "Home -0.25",
-              "odd": "2.47"
+              "odd": "2.62"
             },
             {
               "outcome": "Away -0.25",
-              "odd": "1.53"
+              "odd": "1.47"
             },
             {
               "outcome": "Home +0.25",
-              "odd": "1.35"
+              "odd": "1.39"
             },
             {
               "outcome": "Away +0.25",
-              "odd": "3.15"
+              "odd": "2.92"
             },
             {
               "outcome": "Home +0.5",
-              "odd": "1.23"
+              "odd": "1.26"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "4.00"
+              "odd": "3.75"
             }
           ],
           "Double Chance - First Half": [
             {
               "outcome": "Home/Draw",
-              "odd": "1.23"
+              "odd": "1.26"
             },
             {
               "outcome": "Home/Away",
@@ -13484,13 +13505,13 @@
             },
             {
               "outcome": "Draw/Away",
-              "odd": "1.34"
+              "odd": "1.30"
             }
           ],
           "Double Chance - Second Half": [
             {
               "outcome": "Home/Draw",
-              "odd": "1.28"
+              "odd": "1.32"
             },
             {
               "outcome": "Home/Away",
@@ -13498,13 +13519,13 @@
             },
             {
               "outcome": "Draw/Away",
-              "odd": "1.39"
+              "odd": "1.34"
             }
           ],
           "Both Teams Score - First Half": [
             {
               "outcome": "Yes",
-              "odd": "5.50"
+              "odd": "5.60"
             },
             {
               "outcome": "No",
@@ -13514,7 +13535,7 @@
           "Both Teams To Score - Second Half": [
             {
               "outcome": "Yes",
-              "odd": "4.00"
+              "odd": "4.05"
             },
             {
               "outcome": "No",
@@ -13524,49 +13545,49 @@
           "Home win both halves": [
             {
               "outcome": "Yes",
-              "odd": "6.10"
+              "odd": "6.50"
             },
             {
               "outcome": "No",
-              "odd": "1.07"
+              "odd": "1.06"
             }
           ],
           "Away win both halves": [
             {
               "outcome": "Yes",
-              "odd": "7.50"
+              "odd": "7.10"
             },
             {
               "outcome": "No",
-              "odd": "1.03"
+              "odd": "1.04"
             }
           ],
           "To Win Either Half": [
             {
               "outcome": "Home",
-              "odd": "1.72"
+              "odd": "1.80"
             },
             {
               "outcome": "Away",
-              "odd": "2.05"
+              "odd": "1.93"
             }
           ],
           "Results/Both Teams Score": [
             {
               "outcome": "Home/Yes",
-              "odd": "6.00"
+              "odd": "6.50"
             },
             {
               "outcome": "Draw/Yes",
-              "odd": "4.60"
+              "odd": "4.55"
             },
             {
               "outcome": "Away/Yes",
-              "odd": "8.25"
+              "odd": "7.60"
             },
             {
               "outcome": "Home/No",
-              "odd": "3.45"
+              "odd": "3.80"
             },
             {
               "outcome": "Draw/No",
@@ -13574,13 +13595,13 @@
             },
             {
               "outcome": "Away/No",
-              "odd": "4.50"
+              "odd": "4.10"
             }
           ],
           "First 10 min Winner": [
             {
               "outcome": "Home",
-              "odd": "9.25"
+              "odd": "10.00"
             },
             {
               "outcome": "Draw",
@@ -13588,7 +13609,7 @@
             },
             {
               "outcome": "Away",
-              "odd": "11.75"
+              "odd": "11.00"
             }
           ],
           "Corners 1x2": [
@@ -13598,11 +13619,11 @@
             },
             {
               "outcome": "Draw",
-              "odd": "5.90"
+              "odd": "6.00"
             },
             {
               "outcome": "Away",
-              "odd": "1.98"
+              "odd": "1.95"
             }
           ],
           "Corners Over Under": [
@@ -13658,11 +13679,11 @@
             },
             {
               "outcome": "Home +0.5",
-              "odd": "1.62"
+              "odd": "1.65"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "1.98"
+              "odd": "1.95"
             }
           ],
           "Home Corners Over/Under": [
@@ -13728,37 +13749,37 @@
           "Cards Asian Handicap": [
             {
               "outcome": "Home +0.5",
-              "odd": "1.78"
+              "odd": "1.67"
             },
             {
               "outcome": "Away +0.5",
-              "odd": "1.95"
+              "odd": "2.25"
             }
           ],
           "Home Team Total Cards": [
             {
               "outcome": "Over 2.5",
-              "odd": "2.07"
+              "odd": "1.98"
             },
             {
               "outcome": "Under 2.5",
-              "odd": "1.70"
+              "odd": "1.78"
             }
           ],
           "Away Team Total Cards": [
             {
               "outcome": "Over 2.5",
-              "odd": "1.75"
+              "odd": "1.80"
             },
             {
               "outcome": "Under 2.5",
-              "odd": "2.02"
+              "odd": "1.93"
             }
           ],
           "Home Come From Behind and Win": [
             {
               "outcome": "Yes",
-              "odd": "7.70"
+              "odd": "7.90"
             },
             {
               "outcome": "No",
@@ -13792,21 +13813,21 @@
           "Home Total Corners (1st Half)": [
             {
               "outcome": "Over 2.5",
-              "odd": "2.27"
+              "odd": "2.30"
             },
             {
               "outcome": "Under 2.5",
-              "odd": "1.60"
+              "odd": "1.57"
             }
           ],
           "Home Total Corners (2nd Half)": [
             {
               "outcome": "Over 2.5",
-              "odd": "2.00"
+              "odd": "1.98"
             },
             {
               "outcome": "Under 2.5",
-              "odd": "1.75"
+              "odd": "1.78"
             }
           ],
           "Away Total Corners (1st Half)": [
@@ -13840,7 +13861,7 @@
             },
             {
               "outcome": "Over 5.5",
-              "odd": "2.27"
+              "odd": "2.25"
             },
             {
               "outcome": "Under 5.5",
@@ -13888,7 +13909,7 @@
           "Over/Under 15m-30m": [
             {
               "outcome": "Over 0.5",
-              "odd": "3.45"
+              "odd": "3.50"
             },
             {
               "outcome": "Under 0.5",
@@ -13898,29 +13919,29 @@
           "Over/Under 30m-45m": [
             {
               "outcome": "Over 0.5",
-              "odd": "3.10"
+              "odd": "3.15"
             },
             {
               "outcome": "Under 0.5",
-              "odd": "1.34"
+              "odd": "1.33"
             }
           ],
           "Total Shots": [
             {
               "outcome": "Over 23.5",
-              "odd": "1.45"
+              "odd": "1.53"
             },
             {
               "outcome": "Under 23.5",
-              "odd": "2.62"
+              "odd": "2.40"
             },
             {
               "outcome": "Over 27.5",
-              "odd": "2.55"
+              "odd": "2.82"
             },
             {
               "outcome": "Under 27.5",
-              "odd": "1.47"
+              "odd": "1.40"
             },
             {
               "outcome": "Over 26.5",
@@ -13948,11 +13969,11 @@
             },
             {
               "outcome": "Over 25.5",
-              "odd": "1.87"
+              "odd": "2.00"
             },
             {
               "outcome": "Under 25.5",
-              "odd": "1.88"
+              "odd": "1.75"
             }
           ],
           "Away Player Shots On Target Total": [
@@ -14160,15 +14181,15 @@
           "Away Player Shots Total": [
             {
               "outcome": "Over 11.5",
-              "odd": "1.52"
+              "odd": "1.57"
             },
             {
               "outcome": "Over 12.5",
-              "odd": "1.80"
+              "odd": "1.90"
             },
             {
               "outcome": "Over 13.5",
-              "odd": "2.25"
+              "odd": "2.37"
             },
             {
               "outcome": "Over 14.5",
@@ -14819,9 +14840,12 @@
     {
       "fixture_id": 1520761,
       "liga": "Serie B",
+      "liga_logo": "https://media.api-sports.io/football/leagues/72.png",
       "data_hora": "2026-07-12T21:00:00+00:00",
       "time_casa": "Atletico Goianiense",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/144.png",
       "time_fora": "Fortaleza EC",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/154.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
@@ -19618,9 +19642,12 @@
     {
       "fixture_id": 1520764,
       "liga": "Serie B",
+      "liga_logo": "https://media.api-sports.io/football/leagues/72.png",
       "data_hora": "2026-07-12T22:00:00+00:00",
       "time_casa": "CRB",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/146.png",
       "time_fora": "Goias",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/151.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
@@ -24745,9 +24772,12 @@
     {
       "fixture_id": 1513212,
       "liga": "MLS Next Pro",
+      "liga_logo": "https://media.api-sports.io/football/leagues/909.png",
       "data_hora": "2026-07-12T00:00:00+00:00",
       "time_casa": "Colorado Rapids II",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/4102.png",
       "time_fora": "North Texas",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/10282.png",
       "odds": {
         "Bet365": {
           "Match Winner": [
@@ -25340,9 +25370,12 @@
     {
       "fixture_id": 1525328,
       "liga": "USL League Two",
+      "liga_logo": "https://media.api-sports.io/football/leagues/256.png",
       "data_hora": "2026-07-12T00:00:00+00:00",
       "time_casa": "Unión Villa Krause",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/3961.png",
       "time_fora": "Flatirons Rush",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/18895.png",
       "odds": {},
       "stats_casa": null,
       "stats_fora": null
@@ -25350,9 +25383,12 @@
     {
       "fixture_id": 1525333,
       "liga": "USL League Two",
+      "liga_logo": "https://media.api-sports.io/football/leagues/256.png",
       "data_hora": "2026-07-12T00:00:00+00:00",
       "time_casa": "AHFC Royals",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/4032.png",
       "time_fora": "Houston FC",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/4056.png",
       "odds": {},
       "stats_casa": null,
       "stats_fora": null
@@ -25360,9 +25396,12 @@
     {
       "fixture_id": 1525339,
       "liga": "USL League Two",
+      "liga_logo": "https://media.api-sports.io/football/leagues/256.png",
       "data_hora": "2026-07-12T00:00:00+00:00",
       "time_casa": "Dothan United",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/23116.png",
       "time_fora": "Apotheos",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/23216.png",
       "odds": {},
       "stats_casa": null,
       "stats_fora": null
@@ -25370,9 +25409,12 @@
     {
       "fixture_id": 1525344,
       "liga": "USL League Two",
+      "liga_logo": "https://media.api-sports.io/football/leagues/256.png",
       "data_hora": "2026-07-12T00:00:00+00:00",
       "time_casa": "Houston Sur",
+      "time_casa_escudo": "https://media.api-sports.io/football/teams/18896.png",
       "time_fora": "San Antonio FC 2",
+      "time_fora_escudo": "https://media.api-sports.io/football/teams/27525.png",
       "odds": {},
       "stats_casa": null,
       "stats_fora": null
