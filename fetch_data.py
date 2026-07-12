@@ -19,10 +19,16 @@ import urllib.parse
 API_KEY = os.environ.get("APIFOOTBALL_KEY")
 BASE_URL = "https://v3.football.api-sports.io"
 
-# Ligas que você quer acompanhar. Ajuste essa lista com os IDs que interessam.
-# 71 = Brasileirão Série A | 39 = Premier League | 2 = Champions League
-# 140 = La Liga | 135 = Serie A (ITA) | 61 = Ligue 1 | 78 = Bundesliga
-LEAGUE_IDS = {71, 39, 2, 140, 135, 61, 78}
+# Ligas prioritárias (aparecem primeiro na lista). Não é mais um filtro rígido —
+# o script pega TODOS os jogos do dia e só usa isso pra ordenar.
+# 71 = Brasileirão A | 72 = Brasileirão B | 73 = Copa do Brasil | 13 = Libertadores
+# 11 = Sul-Americana | 253 = MLS | 39 = Premier League | 2 = Champions League
+PRIORITY_LEAGUE_IDS = {71, 72, 73, 13, 11, 253, 39, 2, 140, 135, 61, 78}
+
+# Quantidade máxima de jogos processados por dia (cada jogo consome ~3
+# requisições: odds + stats dos 2 times). Ajuste conforme sua cota diária
+# da API-Football (free = 100 requisições/dia).
+MAX_MATCHES = 20
 
 # Nomes (parciais, case-insensitive) das casas de apostas que você quer ver
 BOOKMAKER_NAMES = ["bet365", "betano", "superbet"]
@@ -55,7 +61,14 @@ def api_get(path, params=None):
 def get_today_fixtures():
     today = datetime.date.today().isoformat()
     fixtures = api_get("/fixtures", {"date": today})
-    return [f for f in fixtures if f["league"]["id"] in LEAGUE_IDS]
+
+    def sort_key(f):
+        # Ligas prioritárias primeiro, depois ordem cronológica
+        is_priority = f["league"]["id"] not in PRIORITY_LEAGUE_IDS
+        return (is_priority, f["fixture"]["date"])
+
+    fixtures.sort(key=sort_key)
+    return fixtures[:MAX_MATCHES]
 
 
 def get_odds_for_fixture(fixture_id):
