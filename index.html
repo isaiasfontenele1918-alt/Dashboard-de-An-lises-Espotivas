@@ -160,6 +160,22 @@
   }
   summary.category-summary::-webkit-details-marker { display: none; }
 
+  .bookmaker-flat {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .bookmaker-flat:last-child { border-bottom: none; }
+  .bookmaker-flat-name {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--accent-dark);
+    background: var(--accent);
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+
   .market-block { margin: 6px 0; }
   .market-name { color: var(--muted); font-size: 11px; font-weight: 600; margin-bottom: 3px; }
   .odd-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; font-size: 13px; }
@@ -298,11 +314,32 @@ function renderMatch(m, idx) {
   const bookmakers = Object.entries(m.odds || {});
   const uid = `m${idx}`;
 
-  const oddsHtml = bookmakers.length
-    ? bookmakers.map(([bname, markets], i) => renderBookmaker(bname, markets, i === 0)).join('')
-    : '<p class="empty">Nenhuma odd encontrada para Bet365/Betano/Superbet neste jogo.</p>';
+  // Agrupa TODOS os mercados de TODAS as casas por categoria (pra virar aba)
+  const categoryMap = {}; // key -> { label, bookmakers: { bname: [items] } }
+  bookmakers.forEach(([bname, markets]) => {
+    Object.entries(markets).forEach(([marketName, outcomes]) => {
+      const cat = categorize(marketName);
+      if (!categoryMap[cat.key]) categoryMap[cat.key] = { label: cat.label, bookmakers: {} };
+      if (!categoryMap[cat.key].bookmakers[bname]) categoryMap[cat.key].bookmakers[bname] = [];
+      categoryMap[cat.key].bookmakers[bname].push({ marketName, outcomes });
+    });
+  });
+
+  const catOrder = ['principal', 'gols', 'escanteios', 'cartoes', 'faltas', 'chutes', 'handicap', 'outros'];
+  const availableCats = catOrder.filter(k => categoryMap[k]);
+
+  const tabsHtml = availableCats.map((key, i) => `
+    <button class="tab-btn ${i === 0 ? 'active' : ''}" onclick="switchTab('${uid}', 'cat-${key}', this)">${categoryMap[key].label}</button>
+  `).join('') + `<button class="tab-btn" onclick="switchTab('${uid}', 'stats', this)">Estatísticas</button>`;
+
+  const catPanelsHtml = availableCats.map((key, i) => `
+    <div class="tab-panel ${i === 0 ? 'active' : ''}" id="${uid}-cat-${key}">
+      ${renderCategoryPanel(categoryMap[key])}
+    </div>
+  `).join('');
 
   const statsHtml = renderStatsTable(m);
+  const noOdds = availableCats.length === 0;
 
   return `
     <details class="match">
@@ -321,15 +358,34 @@ function renderMatch(m, idx) {
         </span>
       </summary>
       <div class="match-body">
+        ${noOdds ? '<p class="empty">Nenhuma odd encontrada para Bet365/Betano/Superbet neste jogo.</p>' : ''}
         <div class="tabs">
-          <button class="tab-btn active" onclick="switchTab('${uid}', 'odds', this)">Odds</button>
-          <button class="tab-btn" onclick="switchTab('${uid}', 'stats', this)">Estatísticas</button>
+          ${noOdds ? `<button class="tab-btn active" onclick="switchTab('${uid}', 'stats', this)">Estatísticas</button>` : tabsHtml}
         </div>
-        <div class="tab-panel active" id="${uid}-odds">${oddsHtml}</div>
-        <div class="tab-panel" id="${uid}-stats">${statsHtml}</div>
+        ${catPanelsHtml}
+        <div class="tab-panel ${noOdds ? 'active' : ''}" id="${uid}-stats">${statsHtml}</div>
       </div>
     </details>
   `;
+}
+
+function renderCategoryPanel(catData) {
+  return Object.entries(catData.bookmakers).map(([bname, items]) => `
+    <div class="bookmaker-flat">
+      <div class="bookmaker-flat-name">${bname}</div>
+      ${items.map(item => `
+        <div class="market-block">
+          <div class="market-name">${item.marketName}</div>
+          ${item.outcomes.map(o => `
+            <div class="odd-row">
+              <span>${o.outcome}</span>
+              <span class="odd-pill">${o.odd}</span>
+            </div>
+          `).join('')}
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
 }
 
 function switchTab(uid, tab, btn) {
@@ -338,50 +394,6 @@ function switchTab(uid, tab, btn) {
   parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById(`${uid}-${tab}`).classList.add('active');
-}
-
-function renderBookmaker(bname, markets, openByDefault) {
-  const groups = {};
-  Object.entries(markets).forEach(([marketName, outcomes]) => {
-    const cat = categorize(marketName);
-    if (!groups[cat.key]) groups[cat.key] = { label: cat.label, items: [] };
-    groups[cat.key].items.push({ marketName, outcomes });
-  });
-
-  const groupKeys = Object.keys(groups);
-  const categoriesHtml = groupKeys.map(key => {
-    const g = groups[key];
-    const isMain = key === 'principal';
-    return `
-      <details class="category" ${isMain ? 'open' : ''}>
-        <summary class="category-summary">
-          <span>${g.label}</span>
-          <span>${isMain ? '' : '▸'}</span>
-        </summary>
-        ${g.items.map(item => `
-          <div class="market-block">
-            <div class="market-name">${item.marketName}</div>
-            ${item.outcomes.map(o => `
-              <div class="odd-row">
-                <span>${o.outcome}</span>
-                <span class="odd-pill">${o.odd}</span>
-              </div>
-            `).join('')}
-          </div>
-        `).join('')}
-      </details>
-    `;
-  }).join('');
-
-  return `
-    <details class="bookmaker" ${openByDefault ? 'open' : ''}>
-      <summary class="bookmaker-summary">
-        <span>${bname}</span>
-        <span class="league-chip">${groupKeys.length} categoria(s)</span>
-      </summary>
-      <div class="bookmaker-body">${categoriesHtml}</div>
-    </details>
-  `;
 }
 
 function pillClass(valueA, valueB, higherIsBetter) {
