@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogos do Dia</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #262b36;
+    --text: #e8eaed;
+    --muted: #8b93a1;
+    --accent: #4ade80;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px;
+  }
+  h1 { font-size: 22px; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .match {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+  .match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .teams { font-size: 17px; font-weight: 600; }
+  .league { color: var(--muted); font-size: 13px; }
+  .time { color: var(--accent); font-size: 13px; }
+  .section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin: 14px 0 8px;
+  }
+  .bookmaker { margin-bottom: 10px; }
+  .bookmaker-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid var(--border); }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-size: 13px;
+  }
+  .stats-grid div.team-name { font-weight: 600; margin-bottom: 4px; }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+</style>
+</head>
+<body>
+  <h1>⚽ Jogos do Dia</h1>
+  <div class="meta" id="meta">Carregando...</div>
+  <div id="matches"></div>
+
+<script>
+async function load() {
+  const metaEl = document.getElementById('meta');
+  const container = document.getElementById('matches');
+  try {
+    const res = await fetch('data.json?_=' + Date.now());
+    const data = await res.json();
+    metaEl.textContent = `Atualizado em ${new Date(data.gerado_em).toLocaleString('pt-BR')} — ${data.jogos.length} jogos`;
+
+    if (data.jogos.length === 0) {
+      container.innerHTML = '<p class="empty">Nenhum jogo encontrado para hoje nas ligas configuradas.</p>';
+      return;
+    }
+
+    container.innerHTML = data.jogos.map(renderMatch).join('');
+  } catch (e) {
+    metaEl.textContent = 'Erro ao carregar data.json. Rode o fetch_data.py e faça commit do arquivo.';
+    console.error(e);
+  }
+}
+
+function renderMatch(m) {
+  const hora = new Date(m.data_hora).toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
+  const bookmakers = Object.entries(m.odds || {});
+
+  const oddsHtml = bookmakers.length
+    ? bookmakers.map(([bname, markets]) => `
+        <div class="bookmaker">
+          <div class="bookmaker-name">${bname}</div>
+          ${Object.entries(markets).map(([marketName, outcomes]) => `
+            <table>
+              <tr><td colspan="2" style="color:var(--muted)">${marketName}</td></tr>
+              ${outcomes.map(o => `<tr><td>${o.outcome}</td><td>${o.odd}</td></tr>`).join('')}
+            </table>
+          `).join('')}
+        </div>
+      `).join('')
+    : '<p class="empty">Nenhuma odd encontrada para Bet365/Betano/Superbet neste jogo.</p>';
+
+  const statsHtml = `
+    <div class="stats-grid">
+      <div>
+        <div class="team-name">${m.time_casa}</div>
+        ${renderStats(m.stats_casa)}
+      </div>
+      <div>
+        <div class="team-name">${m.time_fora}</div>
+        ${renderStats(m.stats_fora)}
+      </div>
+    </div>
+  `;
+
+  return `
+    <div class="match">
+      <div class="match-header">
+        <div class="teams">${m.time_casa} x ${m.time_fora}</div>
+        <div class="league">${m.liga}</div>
+        <div class="time">${hora}</div>
+      </div>
+
+      <div class="section-title">Odds</div>
+      ${oddsHtml}
+
+      <div class="section-title">Estatísticas da temporada</div>
+      ${statsHtml}
+    </div>
+  `;
+}
+
+function renderStats(s) {
+  if (!s) return '<div class="empty">sem dados</div>';
+  return `
+    <div>Jogos: ${s.jogos ?? '-'}</div>
+    <div>Média gols marcados: ${s.gols_marcados_media ?? '-'}</div>
+    <div>Média gols sofridos: ${s.gols_sofridos_media ?? '-'}</div>
+    <div>Cartões amarelos (temporada): ${s.cartoes_amarelos_total ?? '-'}</div>
+    <div>Cartões vermelhos (temporada): ${s.cartoes_vermelhos_total ?? '-'}</div>
+  `;
+}
+
+load();
+</script>
+</body>
+</html>
