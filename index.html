@@ -8,10 +8,12 @@
   :root {
     --bg: #0f1115;
     --card: #171a21;
+    --card-hover: #1c202a;
     --border: #262b36;
     --text: #e8eaed;
     --muted: #8b93a1;
     --accent: #4ade80;
+    --chip: #232838;
   }
   * { box-sizing: border-box; }
   body {
@@ -19,73 +21,213 @@
     font-family: -apple-system, Segoe UI, Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
-    padding: 24px;
+    padding: 20px 16px 60px;
   }
-  h1 { font-size: 22px; margin-bottom: 4px; }
-  .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
-  .match {
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 21px; margin: 0 0 4px; }
+  .meta { color: var(--muted); font-size: 12.5px; margin-bottom: 18px; }
+
+  /* Barra de filtros */
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 8px 0;
+    z-index: 10;
+  }
+  .filters input, .filters select {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .filters input { flex: 1; min-width: 140px; }
+  .filters select { min-width: 160px; }
+
+  /* Card do jogo (collapsed by default) */
+  details.match {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
   }
-  .match-header {
+  details.match[open] { background: var(--card-hover); }
+  summary.match-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  summary.match-summary::-webkit-details-marker { display: none; }
+  .teams { font-size: 15px; font-weight: 600; }
+  .summary-right { display: flex; align-items: center; gap: 10px; }
+  .league-chip {
+    background: var(--chip);
+    color: var(--muted);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .time-chip { color: var(--accent); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .caret { color: var(--muted); font-size: 12px; transition: transform .15s; }
+  details[open] > summary .caret { transform: rotate(90deg); }
+
+  .match-body { padding: 0 16px 16px; }
+  .section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--muted);
+    margin: 12px 0 8px;
+  }
+
+  /* Casa de apostas: accordion */
+  details.bookmaker {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.02);
+  }
+  summary.bookmaker-summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 13px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-    gap: 6px;
   }
-  .teams { font-size: 17px; font-weight: 600; }
-  .league { color: var(--muted); font-size: 13px; }
-  .time { color: var(--accent); font-size: 13px; }
-  .section-title {
+  summary.bookmaker-summary::-webkit-details-marker { display: none; }
+  .bookmaker-body { padding: 0 10px 10px; }
+
+  /* Categoria de mercado dentro da casa: accordion aninhado */
+  details.category {
+    margin-top: 6px;
+    border-top: 1px solid var(--border);
+    padding-top: 6px;
+  }
+  details.category:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  summary.category-summary {
+    list-style: none;
+    cursor: pointer;
     font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
     color: var(--muted);
-    margin: 14px 0 8px;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
   }
-  .bookmaker { margin-bottom: 10px; }
-  .bookmaker-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  summary.category-summary::-webkit-details-marker { display: none; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 2px; }
   td { padding: 3px 6px; border-bottom: 1px solid var(--border); }
+  td.market-name { color: var(--muted); font-size: 11.5px; padding-top: 8px; }
+  td.odd-value { text-align: right; font-weight: 600; }
+
   .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     font-size: 13px;
   }
-  .stats-grid div.team-name { font-weight: 600; margin-bottom: 4px; }
+  .stats-grid .team-name { font-weight: 600; margin-bottom: 4px; }
+  .stats-grid div div { color: var(--muted); font-size: 12.5px; padding: 1px 0; }
   .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  .no-results { text-align: center; padding: 40px 0; color: var(--muted); }
 </style>
 </head>
 <body>
+<div class="wrap">
   <h1>⚽ Jogos do Dia</h1>
   <div class="meta" id="meta">Carregando...</div>
+
+  <div class="filters">
+    <input id="searchInput" type="text" placeholder="Buscar time...">
+    <select id="leagueSelect">
+      <option value="">Todas as ligas</option>
+    </select>
+  </div>
+
   <div id="matches"></div>
+</div>
 
 <script>
+let allMatches = [];
+
+// Agrupa nomes de mercado em categorias, pra deixar compacto
+const CATEGORY_RULES = [
+  { key: 'principal', label: 'Principal', test: n => /match winner|double chance|both teams|draw no bet|1x2/i.test(n) },
+  { key: 'gols', label: 'Gols', test: n => /goals|over\/under|correct score/i.test(n) },
+  { key: 'escanteios', label: 'Escanteios', test: n => /corner/i.test(n) },
+  { key: 'cartoes', label: 'Cartões', test: n => /card/i.test(n) },
+  { key: 'faltas', label: 'Faltas', test: n => /foul/i.test(n) },
+  { key: 'chutes', label: 'Chutes/Finalizações', test: n => /shot/i.test(n) },
+  { key: 'handicap', label: 'Handicap', test: n => /handicap/i.test(n) },
+];
+function categorize(marketName) {
+  const rule = CATEGORY_RULES.find(r => r.test(marketName));
+  return rule || { key: 'outros', label: 'Outros' };
+}
+
 async function load() {
   const metaEl = document.getElementById('meta');
-  const container = document.getElementById('matches');
   try {
     const res = await fetch('data.json?_=' + Date.now());
     const data = await res.json();
-    metaEl.textContent = `Atualizado em ${new Date(data.gerado_em).toLocaleString('pt-BR')} — ${data.jogos.length} jogos`;
+    allMatches = data.jogos || [];
+    metaEl.textContent = `Atualizado em ${new Date(data.gerado_em).toLocaleString('pt-BR')} — ${allMatches.length} jogos`;
 
-    if (data.jogos.length === 0) {
-      container.innerHTML = '<p class="empty">Nenhum jogo encontrado para hoje nas ligas configuradas.</p>';
-      return;
-    }
+    populateLeagueFilter();
+    render();
 
-    container.innerHTML = data.jogos.map(renderMatch).join('');
+    document.getElementById('searchInput').addEventListener('input', render);
+    document.getElementById('leagueSelect').addEventListener('change', render);
   } catch (e) {
     metaEl.textContent = 'Erro ao carregar data.json. Rode o fetch_data.py e faça commit do arquivo.';
     console.error(e);
   }
+}
+
+function populateLeagueFilter() {
+  const select = document.getElementById('leagueSelect');
+  const leagues = [...new Set(allMatches.map(m => m.liga))].sort();
+  leagues.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l;
+    opt.textContent = l;
+    select.appendChild(opt);
+  });
+}
+
+function render() {
+  const container = document.getElementById('matches');
+  const search = document.getElementById('searchInput').value.trim().toLowerCase();
+  const league = document.getElementById('leagueSelect').value;
+
+  const filtered = allMatches.filter(m => {
+    const matchesSearch = !search ||
+      m.time_casa.toLowerCase().includes(search) ||
+      m.time_fora.toLowerCase().includes(search);
+    const matchesLeague = !league || m.liga === league;
+    return matchesSearch && matchesLeague;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<p class="no-results">Nenhum jogo encontrado com esse filtro.</p>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(renderMatch).join('');
 }
 
 function renderMatch(m) {
@@ -93,17 +235,7 @@ function renderMatch(m) {
   const bookmakers = Object.entries(m.odds || {});
 
   const oddsHtml = bookmakers.length
-    ? bookmakers.map(([bname, markets]) => `
-        <div class="bookmaker">
-          <div class="bookmaker-name">${bname}</div>
-          ${Object.entries(markets).map(([marketName, outcomes]) => `
-            <table>
-              <tr><td colspan="2" style="color:var(--muted)">${marketName}</td></tr>
-              ${outcomes.map(o => `<tr><td>${o.outcome}</td><td>${o.odd}</td></tr>`).join('')}
-            </table>
-          `).join('')}
-        </div>
-      `).join('')
+    ? bookmakers.map(([bname, markets], i) => renderBookmaker(bname, markets, i === 0)).join('')
     : '<p class="empty">Nenhuma odd encontrada para Bet365/Betano/Superbet neste jogo.</p>';
 
   const statsHtml = `
@@ -120,30 +252,76 @@ function renderMatch(m) {
   `;
 
   return `
-    <div class="match">
-      <div class="match-header">
-        <div class="teams">${m.time_casa} x ${m.time_fora}</div>
-        <div class="league">${m.liga}</div>
-        <div class="time">${hora}</div>
+    <details class="match">
+      <summary class="match-summary">
+        <span class="teams">${m.time_casa} x ${m.time_fora}</span>
+        <span class="summary-right">
+          <span class="league-chip">${m.liga}</span>
+          <span class="time-chip">${hora}</span>
+          <span class="caret">▶</span>
+        </span>
+      </summary>
+      <div class="match-body">
+        <div class="section-title">Odds</div>
+        ${oddsHtml}
+
+        <div class="section-title">Estatísticas da temporada</div>
+        ${statsHtml}
       </div>
+    </details>
+  `;
+}
 
-      <div class="section-title">Odds</div>
-      ${oddsHtml}
+function renderBookmaker(bname, markets, openByDefault) {
+  // Agrupa os mercados dessa casa por categoria
+  const groups = {};
+  Object.entries(markets).forEach(([marketName, outcomes]) => {
+    const cat = categorize(marketName);
+    if (!groups[cat.key]) groups[cat.key] = { label: cat.label, items: [] };
+    groups[cat.key].items.push({ marketName, outcomes });
+  });
 
-      <div class="section-title">Estatísticas da temporada</div>
-      ${statsHtml}
-    </div>
+  const groupKeys = Object.keys(groups);
+  const categoriesHtml = groupKeys.map(key => {
+    const g = groups[key];
+    const isMain = key === 'principal';
+    return `
+      <details class="category" ${isMain ? 'open' : ''}>
+        <summary class="category-summary">
+          <span>${g.label}</span>
+          <span>${isMain ? '' : '▸'}</span>
+        </summary>
+        ${g.items.map(item => `
+          <table>
+            <tr><td class="market-name" colspan="2">${item.marketName}</td></tr>
+            ${item.outcomes.map(o => `<tr><td>${o.outcome}</td><td class="odd-value">${o.odd}</td></tr>`).join('')}
+          </table>
+        `).join('')}
+      </details>
+    `;
+  }).join('');
+
+  return `
+    <details class="bookmaker" ${openByDefault ? 'open' : ''}>
+      <summary class="bookmaker-summary">
+        <span>${bname}</span>
+        <span>${groupKeys.length} categoria(s)</span>
+      </summary>
+      <div class="bookmaker-body">${categoriesHtml}</div>
+    </details>
   `;
 }
 
 function renderStats(s) {
   if (!s) return '<div class="empty">sem dados</div>';
   return `
-    <div>Jogos: ${s.jogos ?? '-'}</div>
-    <div>Média gols marcados: ${s.gols_marcados_media ?? '-'}</div>
-    <div>Média gols sofridos: ${s.gols_sofridos_media ?? '-'}</div>
-    <div>Cartões amarelos (temporada): ${s.cartoes_amarelos_total ?? '-'}</div>
-    <div>Cartões vermelhos (temporada): ${s.cartoes_vermelhos_total ?? '-'}</div>
+    <div>
+      <div>Jogos: ${s.jogos ?? '-'}</div>
+      <div>Média gols marcados: ${s.gols_marcados_media ?? '-'}</div>
+      <div>Média gols sofridos: ${s.gols_sofridos_media ?? '-'}</div>
+      <div>Cartões amarelos (temporada): ${s.cartoes_amarelos_total ?? '-'}</div>
+      <div>Cartões vermelhos (temporada): ${s.cartoes_vermelhos_total ?? '-'}</div>
+    </div>
   `;
 }
 
