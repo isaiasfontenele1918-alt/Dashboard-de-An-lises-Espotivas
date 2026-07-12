@@ -27,8 +27,8 @@ PRIORITY_LEAGUE_IDS = {71, 72, 73, 13, 11, 253, 39, 2, 140, 135, 61, 78}
 
 # Quantidade máxima de jogos processados por dia (cada jogo consome ~3
 # requisições: odds + stats dos 2 times). Ajuste conforme sua cota diária
-# da API-Football (free = 100 requisições/dia).
-MAX_MATCHES = 20
+# da API-Football (free = 100 requisições/dia, 10 requisições/minuto).
+MAX_MATCHES = 10
 
 # Nomes (parciais, case-insensitive) das casas de apostas que você quer ver
 BOOKMAKER_NAMES = ["bet365", "betano", "superbet"]
@@ -40,22 +40,31 @@ MARKET_KEYWORDS = [
     "corners", "cards", "fouls", "shots", "handicap"
 ]
 
-REQUEST_DELAY = 1.0  # segundos entre chamadas, para não estourar rate limit
+REQUEST_DELAY = 6.5  # segundos entre chamadas (plano free = 10 requisições/minuto)
 
 
-def api_get(path, params=None):
+def api_get(path, params=None, retries=3):
     if not API_KEY:
         raise RuntimeError("Defina a variável de ambiente APIFOOTBALL_KEY antes de rodar.")
     url = f"{BASE_URL}{path}"
     if params:
         url += "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"x-apisports-key": API_KEY})
-    with urllib.request.urlopen(req) as resp:
-        data = json.loads(resp.read().decode())
-    time.sleep(REQUEST_DELAY)
-    if data.get("errors"):
-        print(f"  [aviso] {path} -> {data['errors']}")
-    return data.get("response", [])
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req) as resp:
+                data = json.loads(resp.read().decode())
+            time.sleep(REQUEST_DELAY)
+            if data.get("errors"):
+                print(f"  [aviso] {path} -> {data['errors']}")
+            return data.get("response", [])
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < retries - 1:
+                wait = 20 * (attempt + 1)
+                print(f"  [rate limit] esperando {wait}s antes de tentar de novo...")
+                time.sleep(wait)
+                continue
+            raise
 
 
 def get_today_fixtures():
